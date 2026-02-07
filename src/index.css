@@ -3,111 +3,111 @@
 @tailwind utilities;
 
 /* 
-  Design System: Sportcoach Landingpage
-  Farbwelt: Vertrauensvolle Blautöne, warmes Weiß, professionell und einladend
+  Design System: Apple-inspired Sportcoach Landingpage
+  Refined, minimal, sophisticated with generous whitespace
   All colors MUST be HSL.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    /* Background & Surface Colors */
-    --background: 210 20% 99%;
-    --foreground: 215 25% 17%;
+    /* Background & Surface Colors - More neutral, less blue tint */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 17%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 17%;
+    --popover-foreground: 0 0% 9%;
 
-    /* Primary: Deep Trust Blue */
-    --primary: 215 70% 40%;
+    /* Primary: Refined Dark */
+    --primary: 0 0% 9%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Light Blue Surface */
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 215 25% 17%;
+    /* Secondary: Subtle Gray */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
 
-    /* Muted: Warm Gray */
-    --muted: 210 15% 95%;
-    --muted-foreground: 215 15% 45%;
+    /* Muted: Soft Gray */
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    /* Accent: Vibrant Motivating Blue */
-    --accent: 205 85% 55%;
+    /* Accent: Apple Blue */
+    --accent: 211 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     /* Destructive */
-    --destructive: 0 72% 51%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders & Inputs */
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 215 70% 40%;
+    /* Borders & Inputs - Very subtle */
+    --border: 0 0% 92%;
+    --input: 0 0% 92%;
+    --ring: 211 100% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.875rem;
 
     /* Custom Coach Tokens */
-    --hero-gradient-start: 215 70% 40%;
-    --hero-gradient-end: 205 85% 55%;
-    --section-alt: 210 30% 97%;
-    --trust-badge: 150 45% 45%;
+    --hero-gradient-start: 0 0% 98%;
+    --hero-gradient-end: 0 0% 100%;
+    --section-alt: 0 0% 98%;
+    --trust-badge: 142 71% 45%;
 
-    /* Sidebar (falls benötigt) */
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 215 25% 17%;
-    --sidebar-primary: 215 70% 40%;
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 0 0% 9%;
+    --sidebar-primary: 0 0% 9%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 40% 96%;
-    --sidebar-accent-foreground: 215 25% 17%;
-    --sidebar-border: 210 20% 90%;
-    --sidebar-ring: 215 70% 40%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 9%;
+    --sidebar-border: 0 0% 92%;
+    --sidebar-ring: 211 100% 50%;
   }
 
   .dark {
-    --background: 220 25% 10%;
-    --foreground: 210 20% 95%;
+    --background: 0 0% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 220 25% 13%;
-    --card-foreground: 210 20% 95%;
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 220 25% 13%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 205 85% 60%;
-    --primary-foreground: 220 25% 10%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
 
-    --secondary: 220 20% 18%;
-    --secondary-foreground: 210 20% 95%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 220 20% 18%;
-    --muted-foreground: 210 15% 60%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
 
-    --accent: 205 85% 55%;
+    --accent: 211 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 45%;
+    --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 205 85% 60%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 211 100% 50%;
 
-    --hero-gradient-start: 215 70% 35%;
-    --hero-gradient-end: 205 85% 50%;
-    --section-alt: 220 25% 12%;
-    --trust-badge: 150 45% 40%;
+    --hero-gradient-start: 0 0% 6%;
+    --hero-gradient-end: 0 0% 9%;
+    --section-alt: 0 0% 9%;
+    --trust-badge: 142 71% 40%;
 
-    --sidebar-background: 220 25% 10%;
-    --sidebar-foreground: 210 20% 95%;
-    --sidebar-primary: 205 85% 60%;
-    --sidebar-primary-foreground: 220 25% 10%;
-    --sidebar-accent: 220 20% 18%;
-    --sidebar-accent-foreground: 210 20% 95%;
-    --sidebar-border: 220 20% 20%;
-    --sidebar-ring: 205 85% 60%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 0 0% 9%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 15%;
+    --sidebar-ring: 211 100% 50%;
   }
 }
 
@@ -118,20 +118,29 @@
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+    letter-spacing: -0.011em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold tracking-tight;
+    @apply font-heading font-semibold tracking-tight;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    letter-spacing: -0.035em;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-4 py-16 md:px-8 md:py-24 lg:py-32;
+    @apply px-6 py-20 md:px-8 md:py-28 lg:py-36;
   }
 
   .section-alt {
@@ -143,10 +152,34 @@
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply text-accent;
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-500 ease-out hover:shadow-xl hover:-translate-y-0.5;
   }
+
+  /* Apple-style subtle glow */
+  .glow {
+    box-shadow: 0 0 80px -20px hsl(var(--accent) / 0.15);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
 }
