@@ -4,65 +4,53 @@ const CoachingApproach = () => {
   const approaches = [
     {
       title: "Empathisch & auf Augenhöhe",
-      description: "Ich verstehe, dass jeder Mensch anders ist. Kein Drill, kein Druck – nur Unterstützung, die zu dir passt.",
+      description: "Kein Drill, kein Druck – nur Unterstützung, die zu dir passt.",
     },
     {
       title: "Ganzheitlich denken",
-      description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen, damit du dich rundum besser fühlst.",
+      description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen.",
     },
     {
       title: "Realistische Ziele",
-      description: "Keine überzogenen Versprechen. Stattdessen: Ziele, die du wirklich erreichen kannst – Schritt für Schritt.",
+      description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt.",
     },
     {
       title: "Langfristige Routinen",
-      description: "Mein Ziel ist, dass du irgendwann selbstständig dranbleibst. Ich gebe dir die Werkzeuge dafür.",
+      description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst.",
     },
   ];
 
   return (
     <section id="ansatz" className="section-padding section-alt">
       <div className="container">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Text Content */}
-          <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Mein Ansatz als <span className="text-gradient">Coach</span>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">
+              Mein Ansatz
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Training ist für mich mehr als nur körperliche Übungen. Es geht darum, dich zu stärken – mental und physisch. Mein Coaching basiert auf Vertrauen, Respekt und dem Glauben an dein Potenzial.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Training ist für mich mehr als körperliche Übungen. Es geht darum, dich zu stärken – mental und physisch.
             </p>
-
-            <div className="space-y-6">
-              {approaches.map((approach, index) => (
-                <div key={approach.title} className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center mt-1">
-                    <Check className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg mb-1">{approach.title}</h3>
-                    <p className="text-muted-foreground">{approach.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          {/* Visual Element */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl blur-xl" />
-            <div className="relative bg-card rounded-2xl p-8 md:p-10 border border-border shadow-soft">
-              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
-                „Jeder verdient es, sich in seinem Körper wohlzufühlen. Meine Aufgabe ist es, dir dabei zu helfen, diesen Weg zu finden."
-              </blockquote>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/20" />
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {approaches.map((approach) => (
+              <div key={approach.title} className="flex gap-4">
+                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-trust-badge/10 flex items-center justify-center mt-0.5">
+                  <Check className="w-3.5 h-3.5 text-trust-badge" />
+                </div>
                 <div>
-                  <p className="font-semibold">Dein Coach</p>
-                  <p className="text-sm text-muted-foreground">Personal Trainer, Augsburg</p>
+                  <h3 className="font-semibold text-lg mb-1.5">{approach.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{approach.description}</p>
                 </div>
               </div>
-            </div>
+            ))}
+          </div>
+
+          <div className="mt-16 md:mt-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
+            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
+              „Jeder verdient es, sich in seinem Körper wohlzufühlen. Meine Aufgabe ist es, dir dabei zu helfen, diesen Weg zu finden."
+            </blockquote>
           </div>
         </div>
       </div>
