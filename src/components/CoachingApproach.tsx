@@ -1,41 +1,30 @@
 import { Check } from "lucide-react";
-
 const CoachingApproach = () => {
-  const approaches = [
-    {
-      title: "Empathisch & auf Augenhöhe",
-      description: "Kein Drill, kein Druck – nur Unterstützung, die zu dir passt.",
-    },
-    {
-      title: "Ganzheitlich denken",
-      description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen.",
-    },
-    {
-      title: "Realistische Ziele",
-      description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt.",
-    },
-    {
-      title: "Langfristige Routinen",
-      description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst.",
-    },
-  ];
-
-  return (
-    <section id="ansatz" className="section-padding section-alt">
+  const approaches = [{
+    title: "Empathisch & auf Augenhöhe",
+    description: "Kein Drill, kein Druck – nur Unterstützung, die zu dir passt."
+  }, {
+    title: "Ganzheitlich denken",
+    description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen."
+  }, {
+    title: "Realistische Ziele",
+    description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
+  }, {
+    title: "Langfristige Routinen",
+    description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
+  }];
+  return <section id="ansatz" className="section-padding section-alt">
       <div className="container">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">
               Mein Ansatz
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Training ist für mich mehr als körperliche Übungen. Es geht darum, dich zu stärken – mental und physisch.
-            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Training ist mehr als körperliche Übungen. Es geht darum, stark zu werden - mental und körperlich.    </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {approaches.map((approach) => (
-              <div key={approach.title} className="flex gap-4">
+            {approaches.map(approach => <div key={approach.title} className="flex gap-4">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-trust-badge/10 flex items-center justify-center mt-0.5">
                   <Check className="w-3.5 h-3.5 text-trust-badge" />
                 </div>
@@ -43,8 +32,7 @@ const CoachingApproach = () => {
                   <h3 className="font-semibold text-lg mb-1.5">{approach.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{approach.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="mt-16 md:mt-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
@@ -54,8 +42,6 @@ const CoachingApproach = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default CoachingApproach;
