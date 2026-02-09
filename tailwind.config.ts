@@ -179,15 +179,14 @@ export default {
   			'blur-in': 'blur-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards'
   		},
   		boxShadow: {
-  			'soft': '0 2px 8px -2px rgba(0, 0, 0, 0.05), 0 4px 16px -4px rgba(0, 0, 0, 0.05)',
+  			soft: '0 2px 8px -2px rgba(0, 0, 0, 0.05), 0 4px 16px -4px rgba(0, 0, 0, 0.05)',
   			'soft-lg': '0 8px 32px -8px rgba(0, 0, 0, 0.08), 0 16px 48px -16px rgba(0, 0, 0, 0.05)',
-  			'xl': '0 20px 60px -15px rgba(0, 0, 0, 0.1)',
+  			xl: 'var(--shadow-xl)',
   			'2xs': 'var(--shadow-2xs)',
   			xs: 'var(--shadow-xs)',
   			sm: 'var(--shadow-sm)',
   			md: 'var(--shadow-md)',
   			lg: 'var(--shadow-lg)',
-  			xl: 'var(--shadow-xl)',
   			'2xl': 'var(--shadow-2xl)'
   		},
   		spacing: {
