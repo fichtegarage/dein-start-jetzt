@@ -1,6 +1,8 @@
 import coachImage from "@/assets/coach-hero.jpg";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AboutMe = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const credentials = [
     "Trainer B-Lizenz",
     "Personal-Trainer-Lizenz",
@@ -9,7 +11,7 @@ const AboutMe = () => {
 
   return (
     <section id="ueber-mich" className="section-padding">
-      <div className="container">
+      <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
           {/* Image */}
           <div className="flex justify-center lg:justify-start">
