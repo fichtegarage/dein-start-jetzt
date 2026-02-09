@@ -30,8 +30,8 @@ const TargetAudience = () => {
           {audiences.map((item, index) => <div key={item.title} className="group p-8 md:p-10 rounded-2xl transition-all duration-500 text-primary-foreground bg-accent" style={{
           animationDelay: `${index * 0.1}s`
         }}>
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="leading-relaxed text-secondary">{item.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-primary">{item.title}</h3>
+              <p className="leading-relaxed text-secondary-foreground">{item.description}</p>
             </div>)}
         </div>
       </div>
