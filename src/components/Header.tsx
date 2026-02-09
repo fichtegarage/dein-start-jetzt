@@ -55,8 +55,8 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && <nav className="lg:hidden py-6 animate-fade-in">
-            <div className="flex flex-col gap-1">
+        {isMenuOpen && <nav className="lg:hidden py-6 animate-fade-in absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-soft-lg">
+            <div className="container flex flex-col gap-1">
               {navItems.map(item => <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className="py-3 px-4 text-base font-medium text-foreground hover:text-muted-foreground rounded-xl transition-colors">
                   {item.label}
                 </a>)}
