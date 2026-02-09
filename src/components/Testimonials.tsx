@@ -1,4 +1,7 @@
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+
 const Testimonials = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const testimonials = [
     {
       name: "Anna M.",
@@ -19,7 +22,7 @@ const Testimonials = () => {
 
   return (
     <section className="section-padding">
-      <div className="container">
+      <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">
             Was Kunden sagen

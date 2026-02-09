@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Bitte gib deinen Namen ein").max(100, "Name ist zu lang"),
@@ -13,6 +14,7 @@ const contactSchema = z.object({
 });
 
 const Contact = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -66,7 +68,7 @@ const Contact = () => {
 
   return (
     <section id="kontakt" className="section-padding">
-      <div className="container">
+      <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">
