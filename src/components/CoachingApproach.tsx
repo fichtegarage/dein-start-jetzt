@@ -42,7 +42,7 @@ const CoachingApproach = () => {
 
           <div className="mt-16 md:mt-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
             <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
-              „Jeder verdient es, sich in seinem Körper wohlzufühlen. Meine Aufgabe ist es, dir dabei zu helfen, diesen Weg zu finden."
+              "Der erste Schritt zu einer fitteren Zukunft ist kein Workout. Sondern ein Gespräch."                  
             </blockquote>
           </div>
         </div>
