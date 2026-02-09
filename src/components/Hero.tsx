@@ -23,10 +23,10 @@ const Hero = () => {
             
             <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-semibold leading-[1.05] mb-6 animate-fade-in-up" style={{
             animationDelay: "0.1s"
-          }}>
-              Wie stark ist deine stärkste Ausrede?           
-              <br />
-              <span className="text-gradient">Stärke.</span>
+          }}>Du bist stärker als deine stärkste Ausrede.
+            <br />
+              <span className="text-gradient">
+            </span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed animate-fade-in-up max-w-md mx-auto lg:mx-0" style={{
