@@ -7,7 +7,7 @@ const CoachingApproach = () => {
   } = useScrollAnimation();
   const approaches = [{
     title: "Empathisch & auf Augenhöhe",
-    description: "Kein Drill, kein Druck – nur Unterstützung, die zu dir passt."
+    description: "Kein Drill, kein Druck sondern Unterstützung, die zu dir passt."
   }, {
     title: "Ganzheitlich denken",
     description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen."
