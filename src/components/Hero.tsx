@@ -31,7 +31,7 @@ const Hero = () => {
             
             <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed animate-fade-in-up max-w-md mx-auto lg:mx-0" style={{
             animationDelay: "0.2s"
-          }}>Gemeinsam bauen wir Routinen auf, die zu dir passen und dich stärker machen.
+          }}>Gemeinsam bauen wir Routinen auf, die zu dir passen und dich stärker machen. 
 Stärker als jede Ausrede.
 
           </p>
