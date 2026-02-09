@@ -1,7 +1,9 @@
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
 const TargetAudience = () => {
-  const { ref, isVisible } = useScrollAnimation();
+  const {
+    ref,
+    isVisible
+  } = useScrollAnimation();
   const audiences = [{
     title: "Du startest neu",
     description: "Du hast lange keinen Sport gemacht und weißt nicht, wo du anfangen sollst? Ich begleite dich Schritt für Schritt."
@@ -25,11 +27,11 @@ const TargetAudience = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-          {audiences.map((item, index) => <div key={item.title} className="group p-8 md:p-10 bg-secondary rounded-2xl transition-all duration-500 hover:bg-secondary/80" style={{
+          {audiences.map((item, index) => <div key={item.title} className="group p-8 md:p-10 rounded-2xl transition-all duration-500 text-primary-foreground bg-accent" style={{
           animationDelay: `${index * 0.1}s`
         }}>
               <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              <p className="leading-relaxed text-secondary">{item.description}</p>
             </div>)}
         </div>
       </div>
