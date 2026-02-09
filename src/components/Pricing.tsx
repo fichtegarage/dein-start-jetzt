@@ -63,7 +63,7 @@ const Pricing = () => {
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className={`relative bg-card rounded-2xl p-8 transition-all duration-500 ${
+              className={`relative bg-card rounded-2xl p-8 transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-1 cursor-default ${
                 pkg.popular
                   ? "ring-2 ring-foreground scale-[1.02]"
                   : "border border-border hover:border-foreground/20"

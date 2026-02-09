@@ -27,7 +27,7 @@ const TargetAudience = () => {
         </div>
 
         <div className="grid sm:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-          {audiences.map((item, index) => <div key={item.title} className="group p-8 md:p-10 rounded-2xl transition-all duration-500 text-primary-foreground bg-accent" style={{
+          {audiences.map((item, index) => <div key={item.title} className="group p-8 md:p-10 rounded-2xl transition-all duration-500 text-primary-foreground bg-accent hover:shadow-soft-lg hover:-translate-y-1 hover:bg-accent/80 cursor-default" style={{
           animationDelay: `${index * 0.1}s`
         }}>
               <h3 className="text-xl font-semibold mb-3 text-primary">{item.title}</h3>
