@@ -29,7 +29,7 @@ const CoachingApproach = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">
-            {approaches.map(approach => <div key={approach.title} className="flex gap-4">
+            {approaches.map(approach => <div key={approach.title} className="flex gap-4 p-5 rounded-xl transition-all duration-300 hover:bg-card hover:shadow-soft hover:-translate-y-0.5 cursor-default">
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-trust-badge/10 flex items-center justify-center mt-0.5">
                   <Check className="w-3.5 h-3.5 text-trust-badge" />
                 </div>
