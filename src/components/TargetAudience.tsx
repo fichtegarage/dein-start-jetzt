@@ -15,7 +15,7 @@ const TargetAudience = () => {
   return <section id="zielgruppe" className="section-padding">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">Ist das Training für dich?</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">Passt ein Personal Training zu Dir?</h2>
           <p className="text-lg text-muted-foreground">
             Erkennst du dich hier wieder? Dann bist du genau richtig.
           </p>
