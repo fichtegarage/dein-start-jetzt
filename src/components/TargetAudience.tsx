@@ -12,7 +12,7 @@ const TargetAudience = () => {
     description: "Du hast es schon oft versucht, aber nie durchgehalten? Gemeinsam finden wir heraus, was wirklich zu dir passt."
   }, {
     title: "Motivation fehlt",
-    description: "Dir fehlt der Antrieb und die Energie? Ich helfe dir, deine innere Motivation zu entdecken und nachhaltig zu stärken."
+    description: "Dir fehlt der Antrieb und die Energie? Ich helfe dir, deine innere Motivation zu entdecken und zu stärken."
   }, {
     title: "Mehr Selbstwertgefühl",
     description: "Du möchtest dich in deinem Körper wohler fühlen? Das ist genau mein Ansatz."
