@@ -9,7 +9,7 @@ const TargetAudience = () => {
     description: "Du hast lange keinen Sport gemacht und weißt nicht, wo du anfangen sollst? Ich begleite dich Schritt für Schritt."
   }, {
     title: "Konstanz",
-    description: "Du hast es schon oft versucht, aber nie durchgehalten? Gemeinsam finden wir heraus, was wirklich zu dir passt."
+    description: "Du hast schon öfter begonnen und wieder aufgehört? Gemeinsam finden wir heraus, was zu dir passt."
   }, {
     title: "Motivation fehlt",
     description: "Dir fehlt der Antrieb und die Energie? Ich helfe dir, deine innere Motivation zu entdecken und zu stärken."
