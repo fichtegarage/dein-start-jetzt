@@ -8,7 +8,7 @@ const TargetAudience = () => {
     title: "Du startest neu",
     description: "Du hast lange keinen Sport gemacht und weißt nicht, wo du anfangen sollst? Ich begleite dich Schritt für Schritt."
   }, {
-    title: "Konstanz",
+    title: "Mehr Konstanz",
     description: "Du hast schon öfter begonnen und wieder aufgehört? Gemeinsam finden wir heraus, was zu dir passt."
   }, {
     title: "Motivation fehlt",
