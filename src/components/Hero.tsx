@@ -24,7 +24,7 @@ const Hero = () => {
             <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-semibold leading-[1.05] mb-6 animate-fade-in-up" style={{
             animationDelay: "0.1s"
           }}>
-              <span className="text-sky-600">Stronger</span> Every Day.
+              Du bist <span className="text-sky-600">stärker</span> als deine stärkste Ausrede.
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed animate-fade-in-up max-w-md mx-auto lg:mx-0" style={{
