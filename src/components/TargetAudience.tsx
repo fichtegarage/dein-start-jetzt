@@ -11,7 +11,7 @@ const TargetAudience = () => {
     title: "Mehr Konstanz",
     description: "Du hast schon öfter begonnen und wieder aufgehört? Gemeinsam finden wir heraus, was zu dir passt."
   }, {
-    title: "Motivation fehlt",
+    title: "Mehr Motivation",
     description: "Dir fehlt der Antrieb und die Energie? Ich helfe dir, deine innere Motivation zu entdecken und zu stärken."
   }, {
     title: "Mehr Selbstwertgefühl",
