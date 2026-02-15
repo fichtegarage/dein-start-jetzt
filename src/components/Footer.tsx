@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Dein Coach. Alle Rechte vorbehalten.
+            © {currentYear} Jakob Neumann Training. Alle Rechte vorbehalten.
           </p>
           
           <div className="flex gap-8">

@@ -160,7 +160,7 @@ const Contact = () => {
           </div>
 
           <p className="text-center text-sm text-muted-foreground mt-8">
-            Augsburg & Umgebung • coach@example.com
+            Jakob Neumann Training • Augsburg & Umgebung
           </p>
         </div>
       </div>

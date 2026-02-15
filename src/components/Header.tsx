@@ -34,7 +34,7 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
-          <a href="#" className="text-lg font-semibold tracking-tight">Jakob Neumann</a>
+          <a href="#" className="text-lg font-semibold tracking-tight">Jakob Neumann <span className="text-muted-foreground font-normal">Training</span></a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
