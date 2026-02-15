@@ -30,7 +30,7 @@ const Hero = () => {
             <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed animate-fade-in-up max-w-md mx-auto lg:mx-0" style={{
             animationDelay: "0.2s"
           }}>
-              Für Körper und Mindset. Gemeinsam bauen wir Routinen auf, die zu dir passen und dich jeden Tag stärker machen.
+              Training für Körper und Geist. Gemeinsam bauen wir Routinen auf, die zu dir passen und dich jeden Tag stärker machen.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{
