@@ -25,7 +25,7 @@ const CoachingApproach = () => {
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5 font-sans">
               Mein Ansatz
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">Training ist mehr als körperliche Übungen. Es geht darum, stark zu werden - mental und körperlich.    </p>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">Ob Personal Training oder Gruppenkurs – es geht darum, stärker zu werden. Körperlich und mental.</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8">

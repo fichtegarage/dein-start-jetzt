@@ -18,23 +18,20 @@ const Hero = () => {
           {/* Text Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left max-w-xl mx-auto lg:mx-0">
             <p className="text-sm font-medium text-muted-foreground mb-4 animate-fade-in tracking-wide">
-              Personal Training in Augsburg
+              Personal Training & Gruppenkurse in Augsburg
             </p>
             
             <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-semibold leading-[1.05] mb-6 animate-fade-in-up" style={{
             animationDelay: "0.1s"
-          }}>Du bist <span className="text-sky-600">stärker</span> als deine stärkste Ausrede.
-            <br />
-              <span className="text-gradient">
-            </span>
+          }}>
+              <span className="text-sky-600">Stronger</span> Every Day.
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-10 leading-relaxed animate-fade-in-up max-w-md mx-auto lg:mx-0" style={{
             animationDelay: "0.2s"
-          }}>Gemeinsam bauen wir Routinen auf, die zu dir passen und dich stärker machen.
-Stärker als jede Ausrede.
-
-          </p>
+          }}>
+              Für Körper und Mindset. Gemeinsam bauen wir Routinen auf, die zu dir passen und dich jeden Tag stärker machen.
+            </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{
             animationDelay: "0.3s"
