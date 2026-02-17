@@ -63,8 +63,8 @@ Und wenn Muskeln dazukommen, umso besser.
 
 
             </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Als langjähriger Sportler habe ich selbst erlebt, welche Höhen und Tiefen der Weg mit sich bringt. Diese Erfahrung bringe ich in mein Coaching ein: Verständnis statt Verurteilung, Motivation statt Druck.
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed whitespace-pre-line">
+              {`Sport sollte kein Termin sein, vor dem du dich drückst.\nEr sollte etwas sein, worauf du dich freust.\nZeit nur für dich.\nBewegung, die dir Energie gibt statt sie zu nehmen.\nEin Gefühl danach, das sagt: Das hat mir gutgetan.\nWenn du das im Moment noch nicht kennst, ist das kein Problem.\nWir bauen es gemeinsam auf.`}
             </p>
 
             <div className="flex flex-wrap gap-3">
