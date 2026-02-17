@@ -34,11 +34,13 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
-          <a href="#" className="text-lg font-semibold tracking-tight">Jakob Neumann <span className="text-muted-foreground font-normal">Training – Stronger Every Day</span></a>
+          <a href="#" className="text-lg font-semibold tracking-tight">Training
+Stronger Every Day
+ <span className="text-muted-foreground font-normal">Training – Stronger Every Day</span></a>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
-            {navItems.map(item => <a key={item.href} href={item.href} className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-300">
+            {navItems.map((item) => <a key={item.href} href={item.href} className="text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-300">
                 {item.label}
               </a>)}
           </nav>
@@ -57,7 +59,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <nav className="lg:hidden py-6 animate-fade-in absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border shadow-soft-lg">
             <div className="container flex flex-col gap-1">
-              {navItems.map(item => <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className="py-3 px-4 text-base font-medium text-foreground hover:text-muted-foreground rounded-xl transition-colors">
+              {navItems.map((item) => <a key={item.href} href={item.href} onClick={() => setIsMenuOpen(false)} className="py-3 px-4 text-base font-medium text-foreground hover:text-muted-foreground rounded-xl transition-colors">
                   {item.label}
                 </a>)}
               <div className="pt-4 px-4">
@@ -68,6 +70,4 @@ const Header = () => {
             </div>
           </nav>}
       </div>
-    </header>;
-};
-export default Header;
+    </header>;};export default Header;
