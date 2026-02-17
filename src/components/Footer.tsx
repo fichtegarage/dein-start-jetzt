@@ -13,7 +13,7 @@ const Footer = () => {
             <a href="/impressum" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Impressum
             </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/datenschutz" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Datenschutz
             </a>
           </div>
