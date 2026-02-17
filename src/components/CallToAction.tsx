@@ -16,8 +16,8 @@ const CallToAction = () => {
 
           </h2>
           
-          <p className="text-lg text-muted-foreground mb-10">
-            Ob 1:1 oder in der Gruppe – lass uns in einem kostenlosen Gespräch herausfinden, was am besten zu dir passt.
+          <p className="text-lg text-muted-foreground mb-10">Lass uns in einem kostenlosen Gespräch herausfinden, was am besten zu dir passt.
+
           </p>
 
           <Button
