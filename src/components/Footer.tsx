@@ -10,7 +10,7 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-8">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="/impressum" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Impressum
             </a>
             <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
