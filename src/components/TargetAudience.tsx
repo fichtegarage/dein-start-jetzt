@@ -15,7 +15,7 @@ const TargetAudience = () => {
     description: "Dir fehlt der Antrieb und die Energie? Ich helfe dir, deine innere Motivation zu entdecken und zu stärken."
   }, {
     title: "Mehr Selbstwertgefühl",
-    description: "Du möchtest dich in deinem Körper wohler und stärker fühlen? Lass uns anfangen."
+    description: "Du möchtest dich in deinem Körper wohler und stärker fühlen? Aus unserer gemeinsamen Reise gehst nicht nur stärker raus. Du gehst selbstbewusster raus."
   }];
   return <section id="zielgruppe" className="section-padding">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
