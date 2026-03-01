@@ -6,7 +6,7 @@ const AboutMe = () => {
   const credentials = [
   "Trainer B-Lizenz",
   "Personal-Trainer-Lizenz",
-  "10+ Jahre aktiver Sportler"];
+  "20+ Jahre aktiver Sportler"];
 
 
   return (
