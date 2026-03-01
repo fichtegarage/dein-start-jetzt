@@ -12,8 +12,8 @@ const CoachingApproach = () => {
     title: "Ganzheitliche Stärke",
     description: "Mehr Energie, mehr Belastbarkeit: Wir trainieren nicht nur Muskeln, sondern Haltung."
   }, {
-    title: "Realistische Ziele",
-    description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
+    title: "Stärke mit Substanz",
+    description: "Wir bauen Kraft systematisch auf. Mit klarer Progression, sauberer Technik und ausreichend Regeneration."
   }, {
     title: "Langfristige Routinen",
     description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
