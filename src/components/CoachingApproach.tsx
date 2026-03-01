@@ -7,16 +7,16 @@ const CoachingApproach = () => {
   } = useScrollAnimation();
   const approaches = [{
     title: "Empathisch & auf Augenhöhe",
-    description: "Kein Drill, kein Druck, sondern ein Training, das zu dir und deinem Leben passt."
+    description: "Kein Drill, kein Druck sondern Unterstützung, die zu dir passt."
   }, {
-    title: "Ganzheitliche Stärke",
-    description: "Mehr Energie, mehr Belastbarkeit: Wir trainieren nicht nur Muskeln, sondern Haltung."
+    title: "Ganzheitlich denken",
+    description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen."
   }, {
-    title: "Stärke mit Substanz",
-    description: "Wir bauen Kraft systematisch auf. Mit klarer Progression, sauberer Technik und ausreichend Regeneration."
+    title: "Realistische Ziele",
+    description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
   }, {
     title: "Langfristige Routinen",
-    description: "Motivation kommt und geht. Routine bleibt.\nIch zeige dir, wie du dranbleibst – und zwar auch an schlechten Tagen."
+    description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
   }];
   return <section id="ansatz" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -25,7 +25,7 @@ const CoachingApproach = () => {
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5 font-sans">
               Mein Ansatz
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">Training ist kein Wettkampf gegen dich selbst. Es ist ein Prozess.
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">Training ist kein Wettkampf gegen dich selbst. Es ist ein Prozess, an dessen Ende ein stärkeres Du steht.      
 
           </p>
           </div>
