@@ -40,9 +40,6 @@ const Hero = () => {
                 Gespräch vereinbaren
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Button>
-              <Button onClick={scrollToContent} variant="ghost" size="lg" className="h-12 px-8 text-[15px] font-medium text-muted-foreground hover:text-foreground">
-                Mehr erfahren
-              </Button>
             </div>
           </div>
 
