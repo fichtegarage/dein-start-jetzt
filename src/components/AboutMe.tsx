@@ -27,7 +27,7 @@ const AboutMe = () => {
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-6">
               Über mich
             </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">Stärker zu werden bedeutet nicht nur mehr Gewicht zu bewegen oder dicke Muskeln aufzubauen. Stärker heißt, innerlich stabil zu sein. Selbstvertrauen zu entwickeln. Aufrecht durchs Leben zu gehen. Sich im eigenen Körper wohlzufühlen. Innere Stärke bleibt dabei nicht unsichtbar. Man sieht sie. In deiner Haltung. In deiner Ausstrahlung. In der Art, wie du einen Raum betrittst. Und wenn Muskeln dazukommen, umso besser.
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">Stärker zu werden bedeutet nicht nur mehr Gewicht zu bewegen oder dicke Muskeln aufzubauen. Stärker heißt, innerlich stabil zu sein. Selbstvertrauen zu entwickeln. Aufrecht durchs Leben zu gehen. Sich im eigenen Körper wohlzufühlen. Innere Stärke bleibt dabei nicht unsichtbar. Man sieht sie. In der Haltung. In der Ausstrahlung. In der Art, wie man einen Raum betrittst. Und wenn Muskeln dazukommen, umso besser.
 
 
 
