@@ -19,6 +19,12 @@ const TargetAudience = () => {
   }];
   return <section id="zielgruppe" className="section-padding">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+        <div className="max-w-4xl mx-auto mb-16 md:mb-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
+          <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
+            „Der erste Schritt in deine stärkere Zukunft ist kein Workout, sondern ein Gespräch."
+          </blockquote>
+        </div>
+
         <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">Passt mein Training zu dir?</h2>
           <p className="text-lg text-muted-foreground">
