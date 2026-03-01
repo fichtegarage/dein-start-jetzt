@@ -7,10 +7,10 @@ const CoachingApproach = () => {
   } = useScrollAnimation();
   const approaches = [{
     title: "Empathisch & auf Augenhöhe",
-    description: "Kein Drill, kein Druck sondern Unterstützung, die zu dir passt."
+    description: "Kein Drill, kein Druck, sondern ein Training, das zu dir und deinem Leben passt."
   }, {
-    title: "Ganzheitlich denken",
-    description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen."
+    title: "Ganzheitliche Stärke",
+    description: "Mehr Energie, mehr Belastbarkeit: Wir trainieren nicht nur Muskeln, sondern Haltung."
   }, {
     title: "Realistische Ziele",
     description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
