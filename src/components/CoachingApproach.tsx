@@ -16,7 +16,7 @@ const CoachingApproach = () => {
     description: "Wir bauen Kraft systematisch auf. Mit klarer Progression, sauberer Technik und ausreichend Regeneration."
   }, {
     title: "Langfristige Routinen",
-    description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
+    description: "Motivation kommt und geht. Routine bleibt.\nIch zeige dir, wie du dranbleibst – und zwar auch an schlechten Tagen."
   }];
   return <section id="ansatz" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
