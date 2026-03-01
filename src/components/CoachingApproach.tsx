@@ -21,13 +21,9 @@ const CoachingApproach = () => {
   return <section id="ansatz" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="max-w-4xl mx-auto">
-           <div className="mb-16 md:mb-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">"Training, das sich gut anfühlt. Drinnen und draußen."</blockquote>
-          </div>
-
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5 font-sans">
-              Mein Ansatz
+              "​Der erste Schritt zu deinem stärkeren Ich ist kein Workout, sondern ein Gespräch."
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-sans">Training ist kein Wettkampf gegen dich selbst. Es ist ein Prozess, an dessen Ende ein stärkeres Du steht.      
 
@@ -47,7 +43,7 @@ const CoachingApproach = () => {
           </div>
 
           <div className="mt-16 md:mt-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">„Die meisten Trainer formen deinen Körper. Ich arbeite mit dir daran, wie du dich in ihm fühlst."
+            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">"Der erste Schritt zu einer fitteren Zukunft ist kein Workout, sondern ein Gespräch."
 
           </blockquote>
           </div>
