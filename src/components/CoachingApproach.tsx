@@ -21,6 +21,10 @@ const CoachingApproach = () => {
   return <section id="ansatz" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="max-w-4xl mx-auto">
+           <div className="mb-16 md:mb-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
+            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">"Training, das sich gut anfühlt. Drinnen und draußen."</blockquote>
+          </div>
+
           <div className="text-center mb-16 md:mb-20">
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5 font-sans">
               Mein Ansatz
