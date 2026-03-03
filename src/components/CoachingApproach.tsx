@@ -16,7 +16,7 @@ const CoachingApproach = () => {
     description: "Motivation kommt und geht. Routine bleibt. Ich zeige dir, wie du dranbleibst. Auch an schlechten Tagen."
   }, {
     title: "Langfristige Routinen",
-    description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
+    description: "Mein Ziel ist nicht, dass du mich für immer brauchst. \nMein Ziel ist, dass du selbstständig stärker wirst."
   }];
   return <section id="ansatz" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
