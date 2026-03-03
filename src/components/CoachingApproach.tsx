@@ -12,8 +12,8 @@ const CoachingApproach = () => {
     title: "Ganzheitlich denken",
     description: "Mehr Energie und mehr Belastbarkeit. Wir trainieren nicht nur Muskeln, wir trainieren Haltung und Mindset."
   }, {
-    title: "Realistische Ziele",
-    description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
+    title: "Langfristige Routinen",
+    description: "Motivation kommt und geht. Routine bleibt. Ich zeige dir, wie du dranbleibst. Auch an schlechten Tagen."
   }, {
     title: "Langfristige Routinen",
     description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
