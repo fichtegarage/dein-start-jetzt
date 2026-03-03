@@ -4,7 +4,7 @@ import TargetAudience from "@/components/TargetAudience";
 import CoachingApproach from "@/components/CoachingApproach";
 import AboutMe from "@/components/AboutMe";
 import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
+
 import CallToAction from "@/components/CallToAction";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -19,7 +19,7 @@ const Index = () => {
         <CoachingApproach />
         <AboutMe />
         <Pricing />
-        <Testimonials />
+        
         <CallToAction />
         <Contact />
       </main>
