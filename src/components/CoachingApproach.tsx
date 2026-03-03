@@ -10,13 +10,13 @@ const CoachingApproach = () => {
     description: "Kein Drill, kein Druck sondern Unterstützung, die zu dir passt."
   }, {
     title: "Ganzheitlich denken",
-    description: "Mehr Energie und mehr Belastbarkeit. Wir trainieren nicht nur Muskeln, wir trainieren Haltung und Mindset."
+    description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen."
+  }, {
+    title: "Realistische Ziele",
+    description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
   }, {
     title: "Langfristige Routinen",
-    description: "Motivation kommt und geht. Routine bleibt. Ich zeige dir, wie du dranbleibst. Auch an schlechten Tagen."
-  }, {
-    title: "Langfristige Routinen",
-    description: "Mein Ziel ist nicht, dass du mich für immer brauchst. \nMein Ziel ist, dass du selbstständig stärker wirst."
+    description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
   }];
   return <section id="ansatz" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
@@ -47,7 +47,7 @@ const CoachingApproach = () => {
           </div>
 
           <div className="mt-16 md:mt-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">„Die meisten Trainer formen deinen Körper. Ich arbeite mit dir daran, wie du dich in ihm fühlst."
+            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">„Die meisten Trainer formen deinen Körper. Ich arbeite mit dir außerdem daran, wie du dich in ihm fühlst."
 
           </blockquote>
           </div>
