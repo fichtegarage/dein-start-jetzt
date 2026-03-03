@@ -10,7 +10,7 @@ const CoachingApproach = () => {
     description: "Kein Drill, kein Druck sondern Unterstützung, die zu dir passt."
   }, {
     title: "Ganzheitlich denken",
-    description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen."
+    description: "Mehr Energie und mehr Belastbarkeit. Wir trainieren nicht nur Muskeln, wir trainieren Haltung und Mindset."
   }, {
     title: "Realistische Ziele",
     description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
