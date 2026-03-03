@@ -17,7 +17,7 @@ const TargetAudience = () => {
     title: "Mehr Selbstwertgefühl",
     description: "Du möchtest dich in deinem Körper wohler und stärker fühlen? Aus unserer gemeinsamen Reise gehst nicht nur stärker raus. Du gehst selbstbewusster raus."
   }];
-  return <section id="zielgruppe" className="section-padding">
+  return <section id="zielgruppe" className="section-padding rounded-sm">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="max-w-4xl mx-auto mb-16 md:mb-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
           <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
