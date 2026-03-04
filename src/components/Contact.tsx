@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { supabase } from "@/integrations/supabase/client";
 
 const contactSchema = z.object({
   name: z.string().trim().min(2, "Bitte gib deinen Namen ein").max(100, "Name ist zu lang"),
@@ -50,20 +51,39 @@ const Contact = () => {
     }
 
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    toast({
-      title: "Nachricht gesendet!",
-      description: "Ich melde mich innerhalb von 24 Stunden bei dir.",
-    });
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          name: result.data.name,
+          email: result.data.email,
+          message: result.data.message,
+        },
+      });
 
-    setTimeout(() => {
-      setFormData({ name: "", email: "", message: "" });
-      setIsSubmitted(false);
-    }, 3000);
+      if (error) throw error;
+      if (data?.error) throw new Error(data.error);
+
+      setIsSubmitted(true);
+      toast({
+        title: "Nachricht gesendet!",
+        description: "Ich melde mich innerhalb von 24 Stunden bei dir.",
+      });
+
+      setTimeout(() => {
+        setFormData({ name: "", email: "", message: "" });
+        setIsSubmitted(false);
+      }, 3000);
+    } catch (err) {
+      console.error("Contact form error:", err);
+      toast({
+        title: "Fehler beim Senden",
+        description: "Bitte versuche es später erneut oder schreib mir direkt eine E-Mail.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
