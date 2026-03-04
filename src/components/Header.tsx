@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoRund from "@/assets/logo-rund.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,9 +35,12 @@ const Header = () => {
       <div className="container">
         <div className="flex items-center justify-between h-16 md:h-18">
           {/* Logo */}
-          <a href="#" className="text-lg font-semibold tracking-tight flex flex-col leading-tight">
-            <span>Jakob Neumann Training</span>
-            <span className="text-muted-foreground font-normal text-sm">Stronger Every Day</span>
+          <a href="#" className="flex items-center gap-3">
+            <img src={logoRund} alt="Jakob Neumann Training Logo" className="h-10 w-10" />
+            <div className="text-lg font-semibold tracking-tight flex flex-col leading-tight">
+              <span>Jakob Neumann Training</span>
+              <span className="text-muted-foreground font-normal text-sm">Stronger Every Day</span>
+            </div>
           </a>
 
           {/* Desktop Navigation */}
