@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import coachImage from "@/assets/coach-hero.jpg";
+import logoRund from "@/assets/logo-rund.png";
 const Hero = () => {
   const scrollToContact = () => {
     document.getElementById("kontakt")?.scrollIntoView({
@@ -45,8 +45,13 @@ const Hero = () => {
 
           {/* Image */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end animate-blur-in">
-            <div className="relative">
-              <img src={coachImage} alt="Dein Personal Trainer in Augsburg" className="w-72 h-72 md:w-[360px] md:h-[360px] lg:w-[480px] lg:h-[560px] object-cover rounded-3xl" />
+            <div className="flex flex-col items-center gap-6">
+              <img src={logoRund} alt="Jakob Neumann Training Logo" className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80" />
+              <div className="text-center">
+                <p className="text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight">Jakob Neumann</p>
+                <p className="text-lg md:text-xl text-muted-foreground font-medium mt-1">Stronger Every Day</p>
+                <p className="text-sm md:text-base text-muted-foreground mt-1">Personal Training</p>
+              </div>
             </div>
           </div>
         </div>
