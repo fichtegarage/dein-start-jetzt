@@ -6,17 +6,17 @@ const CoachingApproach = () => {
     isVisible
   } = useScrollAnimation();
   const approaches = [{
-    title: "Empathisch & auf Augenhöhe",
-    description: "Kein Drill, kein Druck sondern Unterstützung, die zu dir passt."
+    title: "Empathisch und planvoll",
+    description: "Wir schauen, wo du stehst und wohin du willst. Dann machen wir uns auf den Weg."
   }, {
     title: "Ganzheitlich denken",
-    description: "Körper und Geist gehören zusammen. Wir arbeiten an beiden Ebenen."
+    description: "Mehr Energie. Mehr Belastbarkeit. Wir trainieren nicht nur Muskeln sondern Haltung und Mindset."
   }, {
-    title: "Realistische Ziele",
-    description: "Ziele, die du wirklich erreichen kannst – Schritt für Schritt."
+    title: "Aufbauen, nicht aufpumpen",
+    description: "Wir trainieren nicht für den Spiegelmoment, sondern für langfristige Stärke. Saubere Technik, durchdachte Progression und echte Belastbarkeit stehen im Fokus."
   }, {
     title: "Langfristige Routinen",
-    description: "Ich gebe dir die Werkzeuge, damit du selbstständig dranbleibst."
+    description: "Motivation kommt und geht. Routine bleibt. Ich zeige dir, wie du dranbleibst. Auch an schlechten Tagen."
   }];
   return <section id="ansatz" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
