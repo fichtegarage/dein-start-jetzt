@@ -1,4 +1,4 @@
-import coachImage from "@/assets/coach-hero.jpg";
+import logoRund from "@/assets/logo-rund.png";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AboutMe = () => {
@@ -14,12 +14,13 @@ const AboutMe = () => {
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
           {/* Image */}
-          <div className="flex justify-center lg:justify-start">
-            <img
-              src={coachImage}
-              alt="Personal Trainer Augsburg"
-              className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-3xl" />
-
+          <div className="flex flex-col items-center lg:items-start gap-6">
+            <img src={logoRund} alt="Jakob Neumann Training Logo" className="w-48 h-48 md:w-64 md:h-64" />
+            <div className="text-center lg:text-left">
+              <p className="text-2xl md:text-3xl font-semibold tracking-tight">Jakob Neumann</p>
+              <p className="text-lg text-muted-foreground font-medium mt-1">Stronger Every Day</p>
+              <p className="text-sm text-muted-foreground mt-1">Personal Training</p>
+            </div>
           </div>
 
           {/* Content */}
