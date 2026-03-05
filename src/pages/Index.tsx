@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TargetAudience from "@/components/TargetAudience";
 import CoachingApproach from "@/components/CoachingApproach";
 import AboutMe from "@/components/AboutMe";
+import OutdoorTraining from "@/components/OutdoorTraining";
 import Pricing from "@/components/Pricing";
 
 import CallToAction from "@/components/CallToAction";
@@ -18,6 +19,7 @@ const Index = () => {
         <TargetAudience />
         <CoachingApproach />
         <AboutMe />
+        <OutdoorTraining />
         <Pricing />
         
         <CallToAction />
