@@ -8,9 +8,9 @@ const Philosophy = () => {
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
-      >
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`
+        }>
+        
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-8 text-center">
             Stärker werden, sich stärker fühlen.
@@ -31,15 +31,15 @@ const Philosophy = () => {
           </div>
 
           <div className="mt-16 md:mt-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
-              „Das Ziel ist nicht der perfekte Körper. Das Ziel bist du – mit
-              mehr Vertrauen in dich selbst."
+            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">„Das Ziel ist nicht der perfekte Körper. Das Ziel bist du: mit mehr Vertrauen in dich selbst."
+
+
             </blockquote>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Philosophy;
