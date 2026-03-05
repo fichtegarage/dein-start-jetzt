@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Philosophy from "@/components/Philosophy";
 import TargetAudience from "@/components/TargetAudience";
 import CoachingApproach from "@/components/CoachingApproach";
 import AboutMe from "@/components/AboutMe";
@@ -16,6 +17,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <Philosophy />
         <TargetAudience />
         <CoachingApproach />
         <AboutMe />
