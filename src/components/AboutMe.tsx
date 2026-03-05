@@ -34,7 +34,7 @@ const AboutMe = () => {
 
             </p>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Ich treibe seit 20 Jahren Sport und kenne die Höhen und Tiefen, die Phasen, in denen man sich kaum zurückhalten kann und die, in denen man sich aufraffen muss. Aber es gibt eine Konstante: Sport, Bewegung hat mir immer gut getan. Diese Erkenntnis möchte ich weitergeben. Sport kann ein Selbstzweck sein, Sport kann aber auch einfach ein Mittel sein, besser durch's Leben zu gehen.                                                                                                                                                  
+              Ich treibe seit 20 Jahren Sport und kenne die Höhen und Tiefen, die Phasen, in denen man sich kaum zurückhalten kann und die, in denen man sich aufraffen muss. Aber: Bewegung hat mir immer gut getan. Diese Erkenntnis möchte ich weitergeben. Sport kann ein Selbstzweck sein, Sport kann aber auch einfach ein Mittel sein, besser durch's Leben zu gehen.                                                                                                                                                  
             </p>
 
             <div className="flex flex-wrap gap-3">
