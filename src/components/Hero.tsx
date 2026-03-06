@@ -37,7 +37,7 @@ const Hero = () => {
             animationDelay: "0.3s"
           }}>
               <Button onClick={scrollToContact} size="lg" className="h-12 px-8 text-[15px] font-medium rounded-full group">
-                Gespräch vereinbaren
+                Kostenloses Erstgespräch buchen
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Button>
             </div>
