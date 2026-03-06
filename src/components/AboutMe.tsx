@@ -1,4 +1,4 @@
-import logoRund from "@/assets/logo-rund.png";
+import logoRund from "@/assets/logo-rund.svg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AboutMe = () => {
