@@ -13,7 +13,7 @@ const CoachingApproach = () => {
     description: "Mehr Energie. Mehr Belastbarkeit. Wir trainieren nicht nur Muskeln sondern Haltung und Mindset."
   }, {
     title: "Aufbauen, nicht aufpumpen",
-    description: "Wir trainieren nicht für den Spiegelmoment, sondern für langfristige Stärke. Saubere Technik, durchdachte Progression und echte Belastbarkeit stehen im Fokus."
+    description: "Wir trainieren nicht für den Spiegelmoment, sondern für langfristige Stärke. Fokus auf saubere Technik, durchdachte Progression und echte Belastbarkeit."
   }, {
     title: "Langfristige Routinen",
     description: "Motivation kommt und geht. Routine bleibt. Ich zeige dir, wie du dranbleibst. Auch an schlechten Tagen."
