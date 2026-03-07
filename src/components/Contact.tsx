@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -19,12 +19,24 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const defaultMessage = "Hallo Jakob, ich möchte stärker werden und freue mich, wenn du mich kontaktierst";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: "",
+    message: defaultMessage,
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const handlePrefill = (e: Event) => {
+      const detail = (e as CustomEvent).detail;
+      if (detail?.message) {
+        setFormData((prev) => ({ ...prev, message: detail.message }));
+      }
+    };
+    window.addEventListener("prefill-contact", handlePrefill);
+    return () => window.removeEventListener("prefill-contact", handlePrefill);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -71,7 +83,7 @@ const Contact = () => {
       });
 
       setTimeout(() => {
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: defaultMessage });
         setIsSubmitted(false);
       }, 3000);
     } catch (err) {
