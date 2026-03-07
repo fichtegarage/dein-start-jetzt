@@ -8,6 +8,7 @@ const Pricing = () => {
     {
       name: "Starter",
       price: "370",
+      pricePerSession: "74",
       description: "5 Einheiten à 60 Min. • gültig 3 Monate",
       features: [
         "Persönliches Erstgespräch & Zielsetzung",
@@ -20,6 +21,7 @@ const Pricing = () => {
     {
       name: "Transformation",
       price: "700",
+      pricePerSession: "70",
       description: "10 Einheiten à 60 Min. • gültig 6 Monate",
       features: [
         "Alles aus Paket Starter",
@@ -32,6 +34,7 @@ const Pricing = () => {
     {
       name: "Intensiv",
       price: "1.300",
+      pricePerSession: "65",
       description: "20 Einheiten à 60 Min. • gültig 12 Monate",
       features: [
         "Alles aus Paket Transformation",
