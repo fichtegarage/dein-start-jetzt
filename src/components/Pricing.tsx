@@ -102,6 +102,9 @@ const Pricing = () => {
               >
                 Jetzt Paket {pkg.name} anfragen
               </Button>
+              <p className="text-[11px] text-muted-foreground text-center mt-3 whitespace-nowrap">
+                Kein Vertrag. Kein Risiko. Einfach ein Gespräch.
+              </p>
             </div>
           ))}
         </div>
