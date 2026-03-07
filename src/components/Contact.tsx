@@ -83,7 +83,7 @@ const Contact = () => {
       });
 
       setTimeout(() => {
-        setFormData({ name: "", email: "", message: "" });
+        setFormData({ name: "", email: "", message: defaultMessage });
         setIsSubmitted(false);
       }, 3000);
     } catch (err) {
