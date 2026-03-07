@@ -87,6 +87,7 @@ const Pricing = () => {
 
               <div className="mb-6">
                 <span className="text-4xl font-semibold">{pkg.price}€</span>
+                <p className="text-sm text-muted-foreground mt-1">{pkg.pricePerSession}€ je Session</p>
               </div>
 
               <ul className="space-y-3 mb-8">
