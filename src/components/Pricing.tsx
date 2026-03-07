@@ -43,7 +43,9 @@ const Pricing = () => {
     },
   ];
 
-  const scrollToContact = () => {
+  const scrollToContact = (packageName: string) => {
+    const message = `Hallo Jakob, ich interessiere mich für das Paket ${packageName} und freue mich, wenn du mich kontaktierst. Viele Grüße`;
+    window.dispatchEvent(new CustomEvent("prefill-contact", { detail: { message } }));
     document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -94,11 +96,11 @@ const Pricing = () => {
               </ul>
 
               <Button
-                onClick={scrollToContact}
+                onClick={() => scrollToContact(pkg.name)}
                 variant={pkg.popular ? "default" : "outline"}
                 className="w-full rounded-full"
               >
-                Anfragen
+                Jetzt Paket {pkg.name} anfragen
               </Button>
             </div>
           ))}
