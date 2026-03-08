@@ -1,13 +1,15 @@
+import { useState } from "react";
 import jakobFoto from "@/assets/jakob-foto.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const AboutMe = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [expanded, setExpanded] = useState(false);
   const credentials = [
-  "Trainer B-Lizenz",
-  "Personal-Trainer-Lizenz",
-  "20+ Jahre aktiver Sportler"];
-
+    "Trainer B-Lizenz",
+    "Personal-Trainer-Lizenz",
+    "20+ Jahre aktiver Sportler",
+  ];
 
   return (
     <section id="ueber-mich" className="section-padding">
@@ -28,28 +30,45 @@ const AboutMe = () => {
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-6">
               Über mich
             </h2>
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">Stärker zu werden bedeutet nicht nur mehr Gewicht zu bewegen oder dicke Muskeln aufzubauen. Stärker heißt, innerlich stabil zu sein. Selbstvertrauen zu entwickeln. Aufrecht durchs Leben zu gehen. Sich im eigenen Körper wohlzufühlen. Innere Stärke bleibt dabei nicht unsichtbar. Man sieht sie. In der Haltung. In der Ausstrahlung. In der Art, wie man einen Raum betrittst. Und wenn Muskeln dazukommen, umso besser.
+            <div className="text-lg text-muted-foreground leading-relaxed space-y-4 mb-6">
+              <p>Ich bin Jakob, aktiver Sportler, Coach für Gruppenkurse und Personal Trainer.</p>
+              <p>Meine Arbeit als Coach in Indoor-Cycling-Kursen hat mir gezeigt, wie viel möglich wird, wenn Menschen die richtige Unterstützung bekommen. Wenn jemand merkt, dass noch mehr in ihm oder ihr steckt, als er oder sie gedacht hat.</p>
+              <p>Das ist meinen Motivation, Unterstützung als Personal Trainer anzubieten. Weil persönliche Begleitung oft der entscheidende Unterschied ist zwischen „Ich sollte mal wieder anfangen" und „Ich bleibe wirklich dran".</p>
+              <p>Mein Ziel im Training ist dein persönlicher Sweet Spot: genug Herausforderung, um stärker zu werden und genug Struktur, damit du langfristig dranbleibst.</p>
+            </div>
 
+            {expanded && (
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-4 mb-6 animate-in fade-in duration-500">
+                <p>Mein eigener Weg im Sport hatte viele Phasen. Zeiten mit konsistentem Training, viel Energie und klaren Zielen. Aber auch Phasen, in denen Motivation gefehlt hat oder andere Dinge im Leben wichtiger waren.</p>
+                <p>Diese Erfahrung hilft mir heute als Trainer. Denn ich weiß, dass Fortschritt selten linear verläuft.</p>
+                <p>Viele Menschen denken, dass sie mehr Disziplin brauchen. Dass sie öfter oder härter trainieren müssen.</p>
+                <p>In Wirklichkeit geht es darum, ein Training zu finden, das langfristig funktioniert.</p>
+                <p>Oft fehlt einfach jemand, der sie begleitet. Der ehrlich Feedback gibt. Und der dafür sorgt, dass aus guten Vorsätzen echte Gewohnheiten werden.</p>
+                <p>Genau diese Rolle übernehme ich im Personal Training.</p>
+                <p>Mir geht es nicht darum, jemanden kurzfristig an seine Grenzen zu bringen. Mir geht es darum, Menschen dabei zu helfen, wieder Vertrauen in ihre eigene Stärke zu entwickeln. Schritt für Schritt.</p>
+                <p>Denn die größte Veränderung passiert nicht in einer einzelnen Trainingseinheit. Sie passiert dann, wenn Bewegung wieder ein fester Teil des eigenen Lebens wird.</p>
+              </div>
+            )}
 
-
-
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Ich treibe seit 20 Jahren Sport und kenne die Höhen und Tiefen, die Phasen, in denen man sich kaum zurückhalten kann und die, in denen man sich aufraffen muss. Aber: Bewegung hat mir immer gut getan. Diese Erkenntnis möchte ich weitergeben. Sport kann ein Selbstzweck sein, Sport kann aber auch einfach ein Mittel sein, besser durch's Leben zu gehen.                                                                                                                                                  
-            </p>
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="text-primary font-medium hover:underline underline-offset-4 transition-colors mb-8 block"
+            >
+              {expanded ? "Weniger anzeigen" : "Weiterlesen"}
+            </button>
 
             <div className="flex flex-wrap gap-3">
-              {credentials.map((credential) => <span key={credential} className="px-4 py-2 bg-secondary rounded-full text-sm font-medium">
-
+              {credentials.map((credential) => (
+                <span key={credential} className="px-4 py-2 bg-secondary rounded-full text-sm font-medium">
                   {credential}
                 </span>
-              )}
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default AboutMe;
