@@ -1,10 +1,17 @@
 import { useState } from "react";
 import jakobFoto from "@/assets/jakob-foto.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+
+const certificateMap: Record<string, string> = {
+  "Trainer B-Lizenz": "/certificates/trainer-b-lizenz.pdf",
+  "Personal-Trainer-Lizenz": "/certificates/personal-trainer-lizenz.pdf",
+};
 
 const AboutMe = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [expanded, setExpanded] = useState(false);
+  const [openCert, setOpenCert] = useState<string | null>(null);
   const credentials = [
     "Trainer B-Lizenz",
     "Personal-Trainer-Lizenz",
@@ -58,12 +65,38 @@ const AboutMe = () => {
             </button>
 
             <div className="flex flex-wrap gap-3">
-              {credentials.map((credential) => (
-                <span key={credential} className="px-4 py-2 bg-secondary rounded-full text-sm font-medium">
-                  {credential}
-                </span>
-              ))}
+              {credentials.map((credential) => {
+                const hasCert = credential in certificateMap;
+                return hasCert ? (
+                  <button
+                    key={credential}
+                    onClick={() => setOpenCert(credential)}
+                    className="px-4 py-2 bg-secondary rounded-full text-sm font-medium hover:bg-secondary/70 transition-colors cursor-pointer"
+                  >
+                    {credential}
+                  </button>
+                ) : (
+                  <span key={credential} className="px-4 py-2 bg-secondary rounded-full text-sm font-medium">
+                    {credential}
+                  </span>
+                );
+              })}
             </div>
+
+            <Dialog open={!!openCert} onOpenChange={() => setOpenCert(null)}>
+              <DialogContent className="max-w-3xl h-[80vh]">
+                <DialogHeader>
+                  <DialogTitle>{openCert}</DialogTitle>
+                </DialogHeader>
+                {openCert && (
+                  <iframe
+                    src={certificateMap[openCert]}
+                    className="w-full h-full rounded-md"
+                    title={openCert}
+                  />
+                )}
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
