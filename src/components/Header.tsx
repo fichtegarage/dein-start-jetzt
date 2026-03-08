@@ -27,6 +27,9 @@ const Header = () => {
   }, {
     label: "Preise",
     href: "#preise"
+  }, {
+    label: "FAQ",
+    href: "#faq"
   }];
   const scrollToContact = () => {
     document.getElementById("kontakt")?.scrollIntoView({
