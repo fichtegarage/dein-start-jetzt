@@ -8,6 +8,7 @@ import OutdoorTraining from "@/components/OutdoorTraining";
 import Pricing from "@/components/Pricing";
 
 import CallToAction from "@/components/CallToAction";
+import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,7 @@ const Index = () => {
         <Pricing />
         
         <CallToAction />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
