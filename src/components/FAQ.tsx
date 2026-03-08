@@ -46,7 +46,7 @@ const faqCategories = [
     questions: [
       {
         q: "Wann sehe ich erste Ergebnisse?",
-        a: "Das hängt davon ab, was du als Ergebnis definierst. Mehr Energie und einen klareren Kopf nach dem Training kommen oft früh. Sichtbare körperliche Veränderungen brauchen Zeit – realistisch sind 6–10 Wochen bei regelmäßigem Training. Echte, langfristige Stabilität entsteht über Monate. Ich verspreche dir keine Wunder – aber einen Plan, der hält.",
+        a: "Das hängt davon ab, was du als Ergebnis definierst. Direkt nach dem Training fühlen die meisten direkt mehr Energie und einen klareren Kopf. Sichtbare körperliche Veränderungen brauchen Zeit – realistisch sind 6 – 10 Wochen bei regelmäßigem Training. Echte, langfristige Stabilität entsteht über Monate. Ich verspreche dir keine Wunder aber einen Plan, der hält.",
       },
       {
         q: "Muss ich gleichzeitig eine Diät machen?",
