@@ -1,12 +1,14 @@
+import { MapPin, Sun, Dumbbell } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { type LucideIcon } from "lucide-react";
 
 const OutdoorTraining = () => {
   const { ref, isVisible } = useScrollAnimation();
 
-  const bullets = [
-    { emoji: "📍", title: "Flexible Locations", description: "Parks, Seen, wo du dich wohlfühlst" },
-    { emoji: "🌤️", title: "Kein Gym nötig", description: "nur du, dein Körper und ein Plan" },
-    { emoji: "💪", title: "Volles Training, volle Wirkung", description: "auch ohne Maschinen" },
+  const bullets: { icon: LucideIcon; title: string; description: string }[] = [
+    { icon: MapPin, title: "Flexible Locations", description: "Parks, Seen, wo du dich wohlfühlst" },
+    { icon: Sun, title: "Kein Gym nötig", description: "nur du, dein Körper und ein Plan" },
+    { icon: Dumbbell, title: "Volles Training, volle Wirkung", description: "auch ohne Maschinen" },
   ];
 
   return (
@@ -37,7 +39,7 @@ const OutdoorTraining = () => {
               key={item.title}
               className="p-6 md:p-8 rounded-2xl bg-card border border-border text-center transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-1 cursor-default"
             >
-              <span className="text-3xl mb-4 block">{item.emoji}</span>
+              <item.icon className="mx-auto mb-4 text-primary" size={28} strokeWidth={1.5} />
               <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
             </div>
