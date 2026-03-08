@@ -67,7 +67,7 @@ const faqCategories = [
     questions: [
       {
         q: "Was ist der Unterschied zwischen den drei Paketen?",
-        a: "Das Starter-Paket (470 €, 5 Einheiten) ist ideal zum Kennenlernen: du lernst meine Arbeitsweise kennen und entwickelst erste Routinen. Das Transformation-Paket (890 €, 10 Einheiten – 89 € pro Einheit) geht tiefer: mit monatlichem Check-in, Ernährungsleitfaden und Fortschrittsmessung. Das Intensiv-Paket (1.700 €, 20 Einheiten – 85 € pro Einheit) bietet maximale Begleitung inklusive WhatsApp-Support zwischen den Einheiten.",
+        a: "Das Starter-Paket (470 €, 5 Einheiten) ist ideal zum Kennenlernen: du lernst meine Arbeitsweise kennen und entwickelst erste Routinen. Das Transformation-Paket (890 €, 10 Einheiten) geht tiefer: mit monatlichem Check-in, Ernährungsleitfaden und Fortschrittsmessung. Das Intensiv-Paket (1.700 €, 20 Einheiten) bietet maximale Begleitung inklusive WhatsApp-Support zwischen den Einheiten.",
       },
       {
         q: "Gibt es einen Vertrag oder eine Kündigungsfrist?",
