@@ -55,7 +55,7 @@ const Pricing = () => {
   return (
     <section id="preise" className="section-padding">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-14">
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">
             Pakete & Preise
           </h2>
@@ -63,6 +63,7 @@ const Pricing = () => {
             Wähle das Paket, das am besten zu deinen Zielen passt.
           </p>
         </div>
+
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {packages.map((pkg) => (

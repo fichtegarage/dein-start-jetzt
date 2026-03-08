@@ -19,7 +19,7 @@ const TargetAudience = () => {
   }];
   return <section id="zielgruppe" className="section-padding">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-12 md:mb-14">
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">Passt mein Training zu dir?</h2>
           <p className="text-lg text-muted-foreground">
             Erkennst du dich hier wieder? Dann bist du genau richtig.
