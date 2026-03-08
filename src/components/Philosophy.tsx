@@ -12,11 +12,6 @@ const Philosophy = () => {
         }>
         
         <div className="max-w-3xl mx-auto">
-          <div className="max-w-4xl mx-auto mb-12 md:mb-14 p-8 md:p-10 bg-card rounded-3xl border border-border">
-            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
-              „Der erste Schritt in deine stärkere Zukunft ist kein Workout, sondern ein Gespräch."
-            </blockquote>
-          </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-8 text-center">
             Stärker werden, sich stärker fühlen.
