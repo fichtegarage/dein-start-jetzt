@@ -33,8 +33,8 @@ const Pricing = () => {
     },
     {
       name: "Intensiv",
-      price: "1.300",
-      pricePerSession: "65",
+      price: "1.700",
+      pricePerSession: "85",
       description: "20 Einheiten à 60 Min. • gültig 12 Monate",
       features: [
         "Alles aus Paket Transformation",
