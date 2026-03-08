@@ -84,14 +84,14 @@ const AboutMe = () => {
             </div>
 
             <Dialog open={!!openCert} onOpenChange={() => setOpenCert(null)}>
-              <DialogContent className="max-w-3xl h-[80vh]">
-                <DialogHeader>
+              <DialogContent className="max-w-3xl h-[90vh] flex flex-col p-4 gap-2">
+                <DialogHeader className="shrink-0">
                   <DialogTitle>{openCert}</DialogTitle>
                 </DialogHeader>
                 {openCert && (
                   <iframe
-                    src={certificateMap[openCert]}
-                    className="w-full h-full rounded-md"
+                    src={`${certificateMap[openCert]}#page=1&view=FitH`}
+                    className="w-full flex-1 rounded-md border-0"
                     title={openCert}
                   />
                 )}
