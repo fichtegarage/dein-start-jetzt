@@ -36,7 +36,7 @@ const Philosophy = () => {
             </p>
           </div>
 
-          <div className="mt-16 md:mt-20 p-8 md:p-12 bg-card rounded-3xl border border-border">
+          <div className="mt-12 md:mt-14 p-8 md:p-10 bg-card rounded-3xl border border-border">
             <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">„Das Ziel ist nicht der perfekte Körper. Das Ziel bist du – mit mehr Vertrauen in dich selbst."
 
 
