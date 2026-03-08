@@ -39,7 +39,7 @@ const OutdoorTraining = () => {
               key={item.title}
               className="p-6 md:p-8 rounded-2xl bg-card border border-border text-center transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-1 cursor-default"
             >
-              <span className="text-3xl mb-4 block">{item.emoji}</span>
+              <item.icon className="mx-auto mb-4 text-primary" size={28} strokeWidth={1.5} />
               <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
             </div>
