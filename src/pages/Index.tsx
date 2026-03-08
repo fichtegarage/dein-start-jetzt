@@ -26,6 +26,7 @@ const Index = () => {
         <Pricing />
         
         <CallToAction />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
