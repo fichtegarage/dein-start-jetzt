@@ -21,6 +21,7 @@ const Index = () => {
       <DotNav />
       <main>
         <Hero />
+        <HeroQuote />
         <Philosophy />
         <TargetAudience />
         <AboutMe />
