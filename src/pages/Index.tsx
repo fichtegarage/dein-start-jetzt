@@ -22,8 +22,8 @@ const Index = () => {
         <Hero />
         <Philosophy />
         <TargetAudience />
-        <CoachingApproach />
         <AboutMe />
+        <CoachingApproach />
         <OutdoorTraining />
         <Pricing />
         

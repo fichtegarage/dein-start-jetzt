@@ -19,7 +19,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <section id="ueber-mich" className="section-padding">
+    <section id="ueber-mich" className="section-padding section-alt">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
           {/* Image */}

@@ -18,7 +18,7 @@ const CoachingApproach = () => {
     title: "Langfristige Routinen",
     description: "Motivation kommt und geht. Routine bleibt. Ich zeige dir, wie du dranbleibst. Auch an schlechten Tagen."
   }];
-  return <section id="ansatz" className="section-padding section-alt">
+  return <section id="ansatz" className="section-padding">
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="max-w-4xl mx-auto">
            <div className="mb-12 md:mb-14 p-8 md:p-10 bg-card rounded-3xl border border-border">
