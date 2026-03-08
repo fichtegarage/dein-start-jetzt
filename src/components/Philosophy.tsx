@@ -4,7 +4,7 @@ const Philosophy = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="section-padding">
+    <section id="philosophie" className="section-padding">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${
