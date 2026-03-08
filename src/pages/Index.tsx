@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import DotNav from "@/components/DotNav";
 import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
 import TargetAudience from "@/components/TargetAudience";
