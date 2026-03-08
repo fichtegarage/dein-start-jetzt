@@ -96,7 +96,7 @@ const faqCategories = [
       },
       {
         q: "Welche Qualifikationen hast du?",
-        a: "Ich halte eine Trainer B-Lizenz sowie eine Personal-Trainer-Lizenz. Dazu kommen 20 Jahre eigene Sport- und Trainingserfahrung mit allen Hochs und Tiefs, die dazugehören. Ich weiß, wie es sich anfühlt, keine Lust zu haben. Und ich weiß, was einen trotzdem weitertreibt.",
+        a: "Ich halte eine Trainer B-Lizenz sowie eine Personal-Trainer-Lizenz und meine Erfahrung als Coach für Gruppensportkurse. Dazu kommen 20 Jahre eigene Sport- und Trainingserfahrung mit allen Hochs und Tiefs, die dazugehören. Ich weiß, wie es sich anfühlt, keine Lust zu haben. Und ich weiß, was einen trotzdem weitertreibt.",
       },
       {
         q: "Was unterscheidet dich von anderen Personal Trainern?",
