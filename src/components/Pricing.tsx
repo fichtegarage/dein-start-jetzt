@@ -20,8 +20,8 @@ const Pricing = () => {
     },
     {
       name: "Transformation",
-      price: "700",
-      pricePerSession: "70",
+      price: "890",
+      pricePerSession: "89",
       description: "10 Einheiten à 60 Min. • gültig 6 Monate",
       features: [
         "Alles aus Paket Starter",
