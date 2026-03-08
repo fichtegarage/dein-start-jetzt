@@ -15,7 +15,7 @@ const AboutMe = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
           {/* Image */}
           <div className="flex flex-col items-center lg:items-start gap-6">
-            <img src={jakobFoto} alt="Jakob Neumann" className="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover" />
+            <img src={jakobFoto} alt="Jakob Neumann" className="w-48 md:w-64 rounded-2xl object-cover" />
             <div className="text-center lg:text-left">
               <p className="text-2xl md:text-3xl font-semibold tracking-tight">Jakob Neumann</p>
               <p className="text-lg text-muted-foreground font-medium mt-1">Stronger Every Day</p>
