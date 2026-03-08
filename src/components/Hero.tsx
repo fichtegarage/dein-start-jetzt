@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoRund from "@/assets/logo-rund.svg";
+import jakobFoto from "@/assets/jakob-foto.jpg";
 const Hero = () => {
   const scrollToContact = () => {
     document.getElementById("kontakt")?.scrollIntoView({
