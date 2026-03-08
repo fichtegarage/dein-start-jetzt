@@ -12,7 +12,7 @@ const OutdoorTraining = () => {
   ];
 
   return (
-    <section id="outdoor" className="section-padding">
+    <section id="outdoor" className="section-padding section-alt">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${

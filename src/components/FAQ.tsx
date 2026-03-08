@@ -114,7 +114,7 @@ const FAQ = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="faq" className="section-padding section-alt">
+    <section id="faq" className="section-padding">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
