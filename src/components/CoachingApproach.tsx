@@ -25,7 +25,7 @@ const CoachingApproach = () => {
             <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">"Training, das sich gut anfühlt. Drinnen und draußen."</blockquote>
           </div>
 
-          <div className="text-center mb-16 md:mb-20">
+          <div className="text-center mb-12 md:mb-14">
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5 font-sans">
               Mein Ansatz
             </h2>
