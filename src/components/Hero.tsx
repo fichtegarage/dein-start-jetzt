@@ -12,7 +12,7 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <section className="relative min-h-[100svh] flex items-center pt-20 pb-16 md:pt-24 md:pb-20">
+  return <section id="hero" className="relative min-h-[100svh] flex items-center pt-20 pb-16 md:pt-24 md:pb-20">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Text Content */}
