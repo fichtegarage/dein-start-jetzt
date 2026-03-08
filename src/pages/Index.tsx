@@ -7,6 +7,7 @@ import TargetAudience from "@/components/TargetAudience";
 import CoachingApproach from "@/components/CoachingApproach";
 import AboutMe from "@/components/AboutMe";
 import OutdoorTraining from "@/components/OutdoorTraining";
+import OutdoorQuote from "@/components/OutdoorQuote";
 import Pricing from "@/components/Pricing";
 
 import CallToAction from "@/components/CallToAction";
