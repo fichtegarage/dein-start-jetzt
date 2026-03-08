@@ -7,8 +7,8 @@ const Pricing = () => {
   const packages = [
     {
       name: "Starter",
-      price: "370",
-      pricePerSession: "74",
+      price: "470",
+      pricePerSession: "94",
       description: "5 Einheiten à 60 Min. • gültig 3 Monate",
       features: [
         "Persönliches Erstgespräch & Zielsetzung",
