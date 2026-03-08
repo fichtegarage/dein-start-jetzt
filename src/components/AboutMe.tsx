@@ -1,10 +1,17 @@
 import { useState } from "react";
 import jakobFoto from "@/assets/jakob-foto.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+
+const certificateMap: Record<string, string> = {
+  "Trainer B-Lizenz": "/certificates/trainer-b-lizenz.pdf",
+  "Personal-Trainer-Lizenz": "/certificates/personal-trainer-lizenz.pdf",
+};
 
 const AboutMe = () => {
   const { ref, isVisible } = useScrollAnimation();
   const [expanded, setExpanded] = useState(false);
+  const [openCert, setOpenCert] = useState<string | null>(null);
   const credentials = [
     "Trainer B-Lizenz",
     "Personal-Trainer-Lizenz",
