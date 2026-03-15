@@ -225,7 +225,14 @@
 
 /* Lovable Badge ausblenden */
 a[href*="lovable.dev"],
+a[href*="lovable.dev"] ~ *,
 a[href*="lovable.dev"] ~ button,
-a[href*="lovable.dev"] ~ * {
+a[href*="lovable.dev"],
+a[href*="lovable.dev"]:has(~ *) {
+  display: none !important;
+}
+
+a[href*="lovable.dev"] + *,
+a[href*="lovable.dev"] + * + * {
   display: none !important;
 }
