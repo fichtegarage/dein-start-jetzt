@@ -222,3 +222,8 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--muted-foreground) / 0.5);
 }
+
+/* Lovable Badge ausblenden */
+a[href*="lovable.dev"] {
+  display: none !important;
+}
