@@ -26,7 +26,7 @@ const Datenschutz = () => {
             <p>Milchberg 8</p>
             <p>86150 Augsburg</p>
             <p>E-Mail: jakob.neumann@posteo.de</p>
-            <p>Telefon: 015154823993</p>
+            <p>Telefon: 0155 67251650</p>
           </div>
 
           <div>
