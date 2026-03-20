@@ -1,9 +1,11 @@
-import { Check, Users } from "lucide-react";
+import { Check, Users, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Pricing = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const [duoOpen, setDuoOpen] = useState(false);
 
   const soloPackages = [
     {
@@ -49,24 +51,45 @@ const Pricing = () => {
 
   const duoPackages = [
     {
-      name: "Duo Starter",
-      pricePerPerson: "69",
-      totalPerPerson: "345",
+      name: "Starter",
+      priceTotal: "345",
+      pricePerSession: "69",
       sessions: "5",
+      description: "5 Einheiten à 60 Min. • gültig 3 Monate",
+      features: [
+        "Persönliches Erstgespräch & Zielsetzung",
+        "5 gemeinsame Trainingseinheiten im JohnReed Augsburg",
+        "Individuelle Pläne für beide Personen",
+        "Fortschrittsdokumentation",
+      ],
       popular: false,
     },
     {
-      name: "Duo Transformation",
-      pricePerPerson: "65",
-      totalPerPerson: "650",
+      name: "Transformation",
+      priceTotal: "650",
+      pricePerSession: "65",
       sessions: "10",
+      description: "10 Einheiten à 60 Min. • gültig 6 Monate",
+      features: [
+        "Alles aus Duo Starter",
+        "Monatlicher Check-in-Call (15 Min.)",
+        "Angepasster Ernährungsleitfaden",
+        "Fortschrittsfotos & Messung",
+      ],
       popular: true,
     },
     {
-      name: "Duo Intensiv",
-      pricePerPerson: "62",
-      totalPerPerson: "1.240",
+      name: "Intensiv",
+      priceTotal: "1.240",
+      pricePerSession: "62",
       sessions: "20",
+      description: "20 Einheiten à 60 Min. • gültig 12 Monate",
+      features: [
+        "Alles aus Duo Transformation",
+        "WhatsApp-Support zwischen den Einheiten",
+        "Priorisierte Terminbuchung",
+        "Eine Gratis-Einheit bei Weiterempfehlung",
+      ],
       popular: false,
     },
   ];
@@ -95,7 +118,7 @@ const Pricing = () => {
           </p>
         </div>
 
-        {/* ── 1:1 Pakete ── */}
+        {/* ── Einzeltraining Pakete ── */}
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {soloPackages.map((pkg) => (
             <div
@@ -147,100 +170,124 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* ── Duo-Training ── */}
-        <div className="mt-16 max-w-5xl mx-auto">
-          {/* Duo Header */}
-          <div className="flex items-center gap-3 mb-3">
-            <div className="flex items-center justify-center w-9 h-9 rounded-full bg-foreground/8 border border-border">
-              <Users className="w-4 h-4 text-foreground/70" />
-            </div>
-            <h3 className="text-2xl font-semibold">Duo-Training</h3>
-          </div>
-          <p className="text-muted-foreground mb-8 max-w-xl">
-            Ihr trainiert gemeinsam – ich betreue euch individuell. Für Freunde, Paare
-            und alle, die zusammen mehr erreichen wollen.{" "}
-            <span className="font-medium text-foreground">Jede Person zahlt separat.</span>
-          </p>
-
-          {/* Duo Cards */}
-          <div className="grid md:grid-cols-3 gap-6">
-            {duoPackages.map((pkg) => (
-              <div
-                key={pkg.name}
-                className={`relative bg-card rounded-2xl p-7 transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-1 cursor-default ${
-                  pkg.popular
-                    ? "ring-2 ring-foreground scale-[1.02]"
-                    : "border border-border hover:border-foreground/20"
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-foreground text-background text-xs font-medium rounded-full">
-                    Empfohlen
-                  </div>
-                )}
-
-                <div className="mb-5">
-                  <h4 className="text-lg font-semibold mb-1">{pkg.name}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {pkg.sessions} Einheiten à 60 Min.
-                  </p>
-                </div>
-
-                <div className="mb-5">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-3xl font-semibold">{pkg.pricePerPerson}€</span>
-                    <span className="text-sm text-muted-foreground">/ Person & Session</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {pkg.totalPerPerson}€ je Person gesamt
-                  </p>
-                </div>
-
-                <ul className="space-y-2 mb-7">
-                  <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-trust-badge mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">
-                      Alles aus dem {pkg.name.replace("Duo ", "")} Einzelpaket
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-trust-badge mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">
-                      Individuelle Betreuung für jede Person
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-4 h-4 text-trust-badge mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-muted-foreground">
-                      Angepasste Last & Intensität pro Person
-                    </span>
-                  </li>
-                </ul>
-
-                <Button
-                  onClick={() => scrollToContact(pkg.name)}
-                  variant={pkg.popular ? "default" : "outline"}
-                  className="w-full rounded-full"
-                >
-                  {pkg.name} anfragen
-                </Button>
-                <p className="text-[11px] text-muted-foreground text-center mt-3">
-                  Kein Vertrag. Kein Risiko. Einfach ein Gespräch.
+        {/* ── Duo-Training Accordion ── */}
+        <div className="max-w-5xl mx-auto mt-10">
+          <button
+            onClick={() => setDuoOpen(!duoOpen)}
+            className={`w-full flex items-center justify-between gap-4 px-6 py-5 rounded-2xl border transition-all duration-300 text-left group ${
+              duoOpen
+                ? "border-foreground/20 bg-card"
+                : "border-border hover:border-foreground/20 bg-card/50 hover:bg-card"
+            }`}
+          >
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-foreground/8 flex items-center justify-center flex-shrink-0">
+                <Users className="w-4 h-4 text-foreground/60" />
+              </div>
+              <div>
+                <p className="font-medium text-sm md:text-base">
+                  Ihr wollt zu zweit mehr erreichen?
+                </p>
+                <p className="text-sm text-muted-foreground mt-0.5 hidden sm:block">
+                  Personal Training für Paare, Freunde und alle, die gemeinsam stärker werden wollen.
                 </p>
               </div>
-            ))}
-          </div>
+            </div>
+            <ChevronDown
+              className={`w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform duration-300 ${
+                duoOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
 
-          {/* Duo note */}
-          <p className="text-xs text-muted-foreground text-center mt-5">
-            Ihr seid zu zweit, aber noch unentschlossen welches Paket?{" "}
-            <button
-              onClick={() => scrollToContact("Duo-Training")}
-              className="underline underline-offset-2 hover:text-foreground transition-colors"
-            >
-              Schreibt mir einfach.
-            </button>
-          </p>
+          {/* Duo content */}
+          <div
+            className={`overflow-hidden transition-all duration-500 ease-in-out ${
+              duoOpen ? "max-h-[2000px] opacity-100 mt-6" : "max-h-0 opacity-0"
+            }`}
+          >
+            {/* Duo intro */}
+            <div className="mb-8 px-1">
+              <p className="text-muted-foreground max-w-xl">
+                Ihr trainiert gemeinsam – ich betreue euch individuell. Jede Person
+                bekommt ihr eigenes Programm, ihre eigene Last, ihr eigenes Tempo.{" "}
+                <span className="font-medium text-foreground">
+                  Die Preise gelten je Person.
+                </span>
+              </p>
+            </div>
+
+            {/* Duo cards */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {duoPackages.map((pkg) => (
+                <div
+                  key={pkg.name}
+                  className={`relative bg-card rounded-2xl p-8 transition-all duration-500 hover:shadow-soft-lg hover:-translate-y-1 cursor-default ${
+                    pkg.popular
+                      ? "ring-2 ring-foreground scale-[1.02]"
+                      : "border border-border hover:border-foreground/20"
+                  }`}
+                >
+                  {pkg.popular && (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 bg-foreground text-background text-xs font-medium rounded-full">
+                      Empfohlen
+                    </div>
+                  )}
+
+                  <div className="mb-6">
+                    <div className="flex items-center gap-2 mb-1">
+                      <h3 className="text-xl font-semibold">{pkg.name}</h3>
+                      <span className="text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
+                        Duo
+                      </span>
+                    </div>
+                    <p className="text-sm text-muted-foreground">{pkg.description}</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="text-4xl font-semibold">{pkg.priceTotal}€</span>
+                      <span className="text-sm text-muted-foreground">/ Person</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {pkg.pricePerSession}€ je Session
+                    </p>
+                  </div>
+
+                  <ul className="space-y-3 mb-8">
+                    {pkg.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
+                        <Check className="w-4 h-4 text-trust-badge mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <Button
+                    onClick={() => scrollToContact(`Duo ${pkg.name}`)}
+                    variant={pkg.popular ? "default" : "outline"}
+                    className="w-full rounded-full"
+                  >
+                    Duo {pkg.name} anfragen
+                  </Button>
+                  <p className="text-[11px] text-muted-foreground text-center mt-3">
+                    Kein Vertrag. Kein Risiko. Einfach ein Gespräch.
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Duo closing note */}
+            <p className="text-xs text-muted-foreground text-center mt-6">
+              Noch unsicher welches Paket passt?{" "}
+              <button
+                onClick={() => scrollToContact("Duo-Training")}
+                className="underline underline-offset-2 hover:text-foreground transition-colors"
+              >
+                Schreibt mir einfach.
+              </button>
+            </p>
+          </div>
         </div>
       </div>
     </section>
