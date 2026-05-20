@@ -1,5 +1,12 @@
+import SEOHead from "@/components/SEOHead";
 const Impressum = () => {
   return (
+    <SEOHead
+  title="Impressum | Jakob Neumann Training"
+  description="Impressum von Jakob Neumann Training, Personal Trainer in Augsburg."
+  canonical="https://www.jakob-neumann.net/impressum"
+  noIndex={true}
+/>
     <div className="min-h-screen bg-background">
       <header className="border-b border-border">
         <div className="container py-6">
