@@ -14,10 +14,16 @@ import CallToAction from "@/components/CallToAction";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
+      <SEOHead
+  title="Personal Trainer Augsburg | Jakob Neumann Training"
+  description="Personal Training & Gruppenkurse in Augsburg mit Jakob Neumann. Individuell, draußen und wirkungsvoll. Jetzt kostenloses Erstgespräch vereinbaren."
+  canonical="https://www.jakob-neumann.net/"
+/>
       <Header />
       <DotNav />
       <main>
