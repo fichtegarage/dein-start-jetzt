@@ -1,6 +1,13 @@
+import SEOHead from "@/components/SEOHead";
 const Datenschutz = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+  title="Datenschutz | Jakob Neumann Training"
+  description="Datenschutzerklärung von Jakob Neumann Training, Personal Trainer in Augsburg."
+  canonical="https://www.jakob-neumann.net/datenschutz"
+  noIndex={true}
+/>
       <header className="border-b border-border">
         <div className="container py-6">
           <a href="/" className="text-lg font-semibold tracking-tight">
