@@ -1,21 +1,114 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "feaf285e6a4d440f8de63322398e3627"}'></script><!-- End Cloudflare Web Analytics -->
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "feaf285e6a4d440f8de63322398e3627"}'></script>
+    <!-- End Cloudflare Web Analytics -->
+
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jakob Neumann Training – Stronger Every Day</title>
-    <meta name="description" content="Personal Training &amp; Gruppenkurse in Augsburg. Stronger Every Day">
+
+    <!-- ======================================================
+         SEO: Title & Meta Description
+         Primäres Keyword "Personal Trainer Augsburg" vorne,
+         Markenname hinten – so sehen Nutzer & Google es zuerst.
+         Description: max. 155 Zeichen, CTA enthalten.
+    ======================================================= -->
+    <title>Personal Trainer Augsburg | Jakob Neumann Training</title>
+    <meta name="description" content="Personal Training & Gruppenkurse in Augsburg mit Jakob Neumann. Individuell, draußen und wirkungsvoll. Jetzt kostenloses Erstgespräch vereinbaren.">
     <meta name="author" content="Jakob Neumann" />
+
+    <!-- Robots: Seite soll indexiert und Links verfolgt werden -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Canonical: verhindert Duplicate-Content durch www/non-www -->
+    <link rel="canonical" href="https://www.jakob-neumann.net/" />
+
+    <!-- ======================================================
+         Open Graph (Facebook, WhatsApp, LinkedIn)
+    ======================================================= -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Jakob Neumann Training – Stronger Every Day">
-    <meta property="og:description" content="Personal Training &amp; Gruppenkurse in Augsburg. Stronger Every Day">
-    <meta property="og:image" content="/og-image.png">
+    <meta property="og:url" content="https://www.jakob-neumann.net/" />
+    <meta property="og:title" content="Personal Trainer Augsburg | Jakob Neumann Training">
+    <meta property="og:description" content="Personal Training & Gruppenkurse in Augsburg mit Jakob Neumann. Individuell, draußen und wirkungsvoll.">
+    <meta property="og:image" content="https://www.jakob-neumann.net/og-image.png">
+    <meta property="og:locale" content="de_DE" />
+
+    <!-- ======================================================
+         Twitter / X Card
+    ======================================================= -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jakob Neumann Training – Stronger Every Day">
-    <meta name="twitter:description" content="Personal Training &amp; Gruppenkurse in Augsburg. Stronger Every Day">
-    <meta name="twitter:image" content="/og-image.png">
+    <meta name="twitter:title" content="Personal Trainer Augsburg | Jakob Neumann Training">
+    <meta name="twitter:description" content="Personal Training & Gruppenkurse in Augsburg mit Jakob Neumann. Individuell, draußen und wirkungsvoll.">
+    <meta name="twitter:image" content="https://www.jakob-neumann.net/og-image.png">
+
+    <!-- ======================================================
+         JSON-LD Structured Data
+         Zwei Schemas:
+         1. LocalBusiness → Google Maps / Local Pack
+         2. Person        → E-E-A-T / Wissensbox
+    ======================================================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://www.jakob-neumann.net/#business",
+          "name": "Jakob Neumann Training",
+          "description": "Personal Training und Gruppenkurse in Augsburg. Individuelles Coaching im Freien und in der Natur.",
+          "url": "https://www.jakob-neumann.net/",
+          "telephone": "+49-DEINE-NUMMER",
+          "email": "DEINE@EMAIL.DE",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Augsburg",
+            "addressRegion": "Bayern",
+            "addressCountry": "DE"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 48.3705,
+            "longitude": 10.8978
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Augsburg"
+          },
+          "priceRange": "€€",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "07:00",
+              "closes": "20:00"
+            }
+          ],
+          "image": "https://www.jakob-neumann.net/og-image.png",
+          "sameAs": [
+            "DEIN_INSTAGRAM_LINK",
+            "DEIN_GOOGLE_BUSINESS_LINK"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.jakob-neumann.net/#person",
+          "name": "Jakob Neumann",
+          "jobTitle": "Personal Trainer",
+          "worksFor": {
+            "@id": "https://www.jakob-neumann.net/#business"
+          },
+          "url": "https://www.jakob-neumann.net/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Augsburg",
+            "addressCountry": "DE"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
