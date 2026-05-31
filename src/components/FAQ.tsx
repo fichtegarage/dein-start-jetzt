@@ -25,11 +25,11 @@ const faqCategories = [
     questions: [
       {
         q: "Was passiert im kostenlosen Erstgespräch?",
-        a: "Das Erstgespräch ist ein echtes Gespräch – kein Verkaufspitch. Wir reden darüber, wo du gerade stehst, was dich bisher aufgehalten hat, und was du dir wünschst. Ich erkläre dir, wie ich arbeite, und du entscheidest danach in Ruhe und ohne Druck, ob es passt. Ca. 30–45 Minuten, völlig unverbindlich.",
+        a: "Erstgespräch und Probetraining sind ein Termin. Wir sprechen über deine Ziele, deine Geschichte, deinen Kalender - und gehen anschließend gemeinsam in Bewegung. Du lernst, wie ich coache, ich sehe, wie du dich bewegst. 60-75 Minuten, kostenlos, unverbindlich, Indoor oder Outdoor.",
       },
       {
         q: "Wo findet das Training statt?",
-        a: "Je nach deiner Präferenz trainieren wir im JohnReed Augsburg (Mitgliedschaft erforderlich) oder im Freien – Parks, Seen, Wiesen rund um Augsburg. Was besser zu dir passt, finden wir im Erstgespräch heraus.",
+        a: "Indoor bei JohnReed Augsburg, Outdoor in einem der Augsburger Parks - den konkreten Standort legen wir beim Assessment fest, gemeinsam mit der Entscheidung, ob Indoor oder Outdoor die Trainingsplan-Basis wird. Pro einzelner Session bleibst du trotzdem frei.",
       },
       {
         q: "Wie oft pro Woche sollte ich trainieren?",
@@ -50,7 +50,7 @@ const faqCategories = [
       },
       {
         q: "Muss ich gleichzeitig eine Diät machen?",
-        a: "Nein. Im Transformation-Paket ist ein Ernährungsleitfaden enthalten – aber keine Diät. Es geht um alltagstaugliche Gewohnheiten, keine Verbote, kein Kalorienzählen.",
+        a: "Nein. Ernährungsberatung ist nicht Teil meiner Pakete - dafür gibt es Spezialisten. Ich fokussiere mich auf das, was ich am besten kann: dich bei deinem Training zu begleiten.",
       },
       {
         q: "Was ist, wenn ich mal eine Einheit verpasse?",
@@ -67,7 +67,7 @@ const faqCategories = [
     questions: [
       {
         q: "Was ist der Unterschied zwischen den drei Paketen?",
-        a: "Das Starter-Paket (470 €, 5 Einheiten) ist ideal zum Kennenlernen: du lernst meine Arbeitsweise kennen und entwickelst erste Routinen. Das Transformation-Paket (890 €, 10 Einheiten) geht tiefer: mit monatlichem Check-in, Ernährungsleitfaden und Fortschrittsmessung. Das Intensiv-Paket (1.700 €, 20 Einheiten) bietet maximale Begleitung inklusive WhatsApp-Support zwischen den Einheiten.",
+        a: "Die Leistungen sind in allen drei Paketen identisch: Assessment, Trainingsplan in der App, Indoor oder Outdoor pro Session frei wählbar, automatische Progression. Unterschiedlich sind nur Session-Anzahl und Laufzeit: Starter (5 Sessions, 3 Monate) zum Kennenlernen, Transformation (10 Sessions, 6 Monate) als Sweet Spot für echte Gewohnheiten, Intensiv (20 Sessions, 12 Monate) für nachhaltige Veränderung.",
       },
       {
         q: "Gibt es einen Vertrag oder eine Kündigungsfrist?",
@@ -96,7 +96,7 @@ const faqCategories = [
       },
       {
         q: "Welche Qualifikationen hast du?",
-        a: "Ich halte eine Trainer B-Lizenz sowie eine Personal-Trainer-Lizenz und meine Erfahrung als Coach für Gruppensportkurse. Dazu kommen 20 Jahre eigene Sport- und Trainingserfahrung mit allen Hochs und Tiefs, die dazugehören. Ich weiß, wie es sich anfühlt, keine Lust zu haben. Und ich weiß, was einen trotzdem weitertreibt.",
+        a: "Ich halte eine Trainer B-Lizenz, eine Personal-Trainer-Lizenz und eine Functional-Trainer-Lizenz und meine Erfahrung als Coach für Gruppensportkurse. Dazu kommen 20 Jahre eigene Sport- und Trainingserfahrung mit allen Hochs und Tiefs, die dazugehören. Ich weiß, wie es sich anfühlt, keine Lust zu haben. Und ich weiß, was einen trotzdem weitertreibt.",
       },
       {
         q: "Was unterscheidet dich von anderen Personal Trainern?",
