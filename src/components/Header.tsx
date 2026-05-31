@@ -20,14 +20,14 @@ const Header = () => {
     label: "Für wen",
     href: "#zielgruppe"
   }, {
+    label: "Über mich",
+    href: "#ueber-mich"
+  }, {
     label: "Ansatz",
     href: "#ansatz"
   }, {
     label: "App",
     href: "#coach-hub"
-  }, {
-    label: "Über mich",
-    href: "#ueber-mich"
   }, {
     label: "Outdoor",
     href: "#outdoor"
