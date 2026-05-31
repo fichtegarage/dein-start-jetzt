@@ -8,47 +8,48 @@ const Pricing = () => {
   const [duoOpen, setDuoOpen] = useState(false);
 
   const soloPackages = [
-    {
-      name: "Starter",
-      price: "470",
-      pricePerSession: "94",
-      description: "5 Einheiten à 60 Min. • gültig 3 Monate",
-      features: [
-        "Persönliches Erstgespräch & Zielsetzung",
-        "5 individuelle 1:1-Trainingseinheiten im JohnReed Augsburg",
-        "Trainingsplan passend zu deinen Zielen",
-        "Fortschrittsdokumentation",
-      ],
-      popular: false,
-    },
-    {
-      name: "Transformation",
-      price: "890",
-      pricePerSession: "89",
-      description: "10 Einheiten à 60 Min. • gültig 6 Monate",
-      features: [
-        "Alles aus Paket Starter",
-        "Monatlicher Check-in-Call (15 Min.)",
-        "Angepasster Ernährungsleitfaden",
-        "Fortschrittsfotos & Messung",
-      ],
-      popular: true,
-    },
-    {
-      name: "Intensiv",
-      price: "1.700",
-      pricePerSession: "85",
-      description: "20 Einheiten à 60 Min. • gültig 12 Monate",
-      features: [
-        "Alles aus Paket Transformation",
-        "WhatsApp-Support zwischen den Einheiten",
-        "Priorisierte Terminbuchung",
-        "Eine Gratis-Einheit bei Weiterempfehlung",
-      ],
-      popular: false,
-    },
-  ];
-
+  {
+    name: "Starter",
+    price: "470",
+    pricePerSession: "94",
+    description: "5 Trainings-Sessions à 60 Min. • gültig 3 Monate",
+    features: [
+      "Assessment inkludiert (eigene Einheit)",
+      "Trainingsplan in der App",
+      "Indoor oder Outdoor pro Session frei",
+      "Automatische Progression",
+    ],
+    popular: false,
+  },
+  {
+    name: "Transformation",
+    price: "890",
+    pricePerSession: "89",
+    description: "10 Trainings-Sessions à 60 Min. • gültig 6 Monate",
+    features: [
+      "Assessment inkludiert (eigene Einheit)",
+      "Trainingsplan in der App",
+      "Indoor oder Outdoor pro Session frei",
+      "Automatische Progression",
+    ],
+    popular: true,
+    note: "Sweet Spot für echte Gewohnheiten",
+  },
+  {
+    name: "Intensiv",
+    price: "1.700",
+    pricePerSession: "85",
+    description: "20 Trainings-Sessions à 60 Min. • gültig 12 Monate",
+    features: [
+      "Assessment inkludiert (eigene Einheit)",
+      "Trainingsplan in der App",
+      "Indoor oder Outdoor pro Session frei",
+      "Automatische Progression",
+    ],
+    popular: false,
+    note: "Für nachhaltige Veränderung",
+  },
+];
   const duoPackages = [
     {
       name: "Starter",
@@ -114,7 +115,7 @@ const Pricing = () => {
             Pakete & Preise
           </h2>
           <p className="text-lg text-muted-foreground">
-            Wähle das Paket, das am besten zu deinen Zielen passt.
+            Drei Pakete. Eine Methode. Das Assessment ist in jedem Paket enthalten und zählt nicht als Trainings-Session. Indoor und Outdoor sind gleichwertig - du entscheidest pro Session frei.
           </p>
         </div>
 
@@ -145,6 +146,9 @@ const Pricing = () => {
                 <p className="text-sm text-muted-foreground mt-1">
                   {pkg.pricePerSession}€ je Session
                 </p>
+                {pkg.note && (
+  <p className="text-sm text-trust-badge mt-2 font-medium">{pkg.note}</p>
+)}
               </div>
 
               <ul className="space-y-3 mb-8">
