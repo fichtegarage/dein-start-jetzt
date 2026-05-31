@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
 import TargetAudience from "@/components/TargetAudience";
 import CoachingApproach from "@/components/CoachingApproach";
+import CoachHub from "@/components/CoachHub";
 import AboutMe from "@/components/AboutMe";
 import OutdoorTraining from "@/components/OutdoorTraining";
 import OutdoorQuote from "@/components/OutdoorQuote";
@@ -33,6 +34,7 @@ const Index = () => {
         <TargetAudience />
         <AboutMe />
         <CoachingApproach />
+        <CoachHub />
         <OutdoorTraining />
         <OutdoorQuote />
         <Pricing />
