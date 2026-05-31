@@ -85,13 +85,12 @@ serve(async (req) => {
     });
 
     if (!emailRes.ok) {
-      const errBody = await emailRes.text();
-      console.error(`Resend API error [${emailRes.status}]:`, errBody);
-      // Don't fail the whole request if email fails - data is saved in DB
-      console.warn("Email sending failed but contact was saved to database");
-    }
+  const errBody = await emailRes.text();
+  console.error(`Resend API error [${emailRes.status}]:`, errBody);
+  throw new Error(`E-Mail-Versand fehlgeschlagen (${emailRes.status})`);
+}
 
-    return new Response(JSON.stringify({ success: true }), {
+return new Response(JSON.stringify({ success: true }), {
       status: 200,
       headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
