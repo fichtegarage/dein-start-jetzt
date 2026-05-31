@@ -70,7 +70,7 @@ serve(async (req) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Kontaktformular <onboarding@resend.dev>",
+        from: "Kontaktformular <hallo@jakob-neumann.net>",
         to: ["jakob.neumann@posteo.de"],
         subject: `Neue Kontaktanfrage von ${name.trim()}`,
         html: `
