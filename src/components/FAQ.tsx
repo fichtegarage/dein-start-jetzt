@@ -54,7 +54,7 @@ const faqCategories = [
       },
       {
         q: "Was ist, wenn ich mal eine Einheit verpasse?",
-        a: "Das ist kein Problem. Einheiten können im Rahmen der Paketlaufzeit nachgeholt werden. Ich bitte nur um möglichst 24 Stunden Vorlauf bei Absagen.",
+        a: "Du sagst mir Bescheid. Bei rechtzeitiger Absage (mindestens 24 h vorher) buchen wir die Session um. Bei längerer Krankheit pausieren wir deine Laufzeit – ab zwei Wochen mit Attest. Andere Pausen halten wir vorab gemeinsam schriftlich fest. Sessions, die innerhalb deiner Laufzeit nicht genutzt werden, verfallen. Deshalb wähle ich mit dir gemeinsam ein Paket, das wirklich zu deinem Alltag passt.",
       },
       {
         q: "Ich habe es schon öfters versucht und immer wieder aufgehört. Warum soll es diesmal anders sein?",
