@@ -13,7 +13,7 @@ const OutdoorQuote = () => {
       >
         <div className="max-w-4xl mx-auto p-8 md:p-10 bg-card rounded-3xl border border-border">
           <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
-            "Training, das sich gut anfühlt. Drinnen und draußen."
+            „Training, das sich gut anfühlt. Drinnen und draußen."
           </blockquote>
         </div>
       </div>
