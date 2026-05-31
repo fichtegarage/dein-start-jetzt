@@ -92,7 +92,7 @@ const faqCategories = [
     questions: [
       {
         q: "Du bist neu als Personal Trainer – warum sollte ich gerade dir vertrauen?",
-        a: "Das ist eine faire Frage. Ich fange als Personal Trainer neu an – und das sage ich offen. Was ich mitbringe: 20 Jahre eigene Trainingserfahrung, eine fundierte Ausbildung (Trainer B-Lizenz, Personal-Trainer-Lizenz) und echte Motivation, dir zu helfen. Weil ich noch am Anfang stehe, bekommst du etwas, was nicht alle etablierten Trainer bieten: volle Aufmerksamkeit, maximales Engagement und faire Einstiegspreise.",
+        a: "Das ist eine faire Frage. Ich fange als Personal Trainer neu an – und das sage ich offen. Was ich mitbringe: 20 Jahre eigene Trainingserfahrung, eine fundierte Ausbildung (Trainer B-Lizenz, Personal-Trainer-Lizenz, Functional-Trainer-Lizenz) und echte Motivation, dir zu helfen. Weil ich noch am Anfang stehe, bekommst du etwas, was nicht alle etablierten Trainer bieten: volle Aufmerksamkeit, maximales Engagement und faire Einstiegspreise.",
       },
       {
         q: "Welche Qualifikationen hast du?",
