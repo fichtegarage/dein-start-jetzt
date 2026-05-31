@@ -18,7 +18,10 @@ const Header = () => {
   }, {
     label: "Ansatz",
     href: "#ansatz"
-  }, {
+  }, { 
+    label: "App", 
+    href: "#coach-hub"
+  },{
     label: "Über mich",
     href: "#ueber-mich"
   }, {
