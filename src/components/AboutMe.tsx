@@ -6,7 +6,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 const certificateMap: Record<string, string> = {
   "Trainer B-Lizenz": "/certificates/trainer-b-lizenz.pdf",
   "Personal-Trainer-Lizenz": "/certificates/personal-trainer-lizenz.pdf",
-  "Functional Trainer Lizenz": "/certificates/functional-trainer-lizenz.pdf",
+  "Functional-Trainer-Lizenz": "/certificates/functional-trainer-lizenz.pdf",
 };
 
 const AboutMe = () => {
@@ -16,7 +16,7 @@ const AboutMe = () => {
   const credentials = [
     "Trainer B-Lizenz",
     "Personal-Trainer-Lizenz",
-    "Functional Trainer Lizenz",
+    "Functional-Trainer-Lizenz",
     "20+ Jahre aktiver Sportler",
   ];
 
@@ -66,6 +66,9 @@ const AboutMe = () => {
               {expanded ? "Weniger anzeigen" : "Weiterlesen"}
             </button>
 
+            <p className="text-sm text-muted-foreground mb-3">
+              Qualifikationen – klick für Zertifikat
+            </p>
             <div className="flex flex-wrap gap-3">
               {credentials.map((credential) => {
                 const hasCert = credential in certificateMap;
