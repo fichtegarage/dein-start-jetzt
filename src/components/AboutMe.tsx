@@ -42,7 +42,7 @@ const AboutMe = () => {
             <div className="text-lg text-muted-foreground leading-relaxed space-y-4 mb-6">
               <p>Ich bin Jakob, aktiver Sportler, Coach für Gruppenkurse und Personal Trainer.</p>
               <p>Meine Arbeit als Coach in <strong>Indoor-Cycling-Kursen</strong> hat mir gezeigt, wie viel möglich wird, wenn Menschen die richtige Unterstützung bekommen. Wenn jemand merkt, dass noch mehr in ihm oder ihr steckt, als er oder sie gedacht hat.</p>
-              <p>Das ist meinen Motivation, Unterstützung als Personal Trainer anzubieten. Weil <strong>persönliche Begleitung</strong> oft der entscheidende Unterschied ist zwischen „Ich sollte mal wieder anfangen" und „Ich bleibe wirklich dran".</p>
+              <p>Das ist meine Motivation, Unterstützung als Personal Trainer anzubieten. Weil <strong>persönliche Begleitung</strong> oft der entscheidende Unterschied ist zwischen „Ich sollte mal wieder anfangen" und „Ich bleibe wirklich dran".</p>
               <p>Mein Ziel im Training ist dein persönlicher Sweet Spot: genug <strong>Herausforderung</strong>, um stärker zu werden und genug <strong>Struktur</strong>, damit du langfristig dranbleibst.</p>
             </div>
 
