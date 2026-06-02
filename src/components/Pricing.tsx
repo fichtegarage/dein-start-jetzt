@@ -147,16 +147,10 @@ const Pricing = () => {
                 <span className="text-4xl font-semibold">{pkg.price}€</span>
                 <p className="text-sm text-muted-foreground mt-1">
                   {pkg.pricePerSession}€ je Session
-                  <p className="text-sm text-muted-foreground mt-1">
-                      {pkg.pricePerSession}€ je Session
-                    </p>
-                    {pkg.note && (
-                      <p className="text-sm text-trust-badge mt-2 font-medium">{pkg.note}</p>
-                    )}
                 </p>
                 {pkg.note && (
-  <p className="text-sm text-trust-badge mt-2 font-medium">{pkg.note}</p>
-)}
+                  <p className="text-sm text-trust-badge mt-2 font-medium">{pkg.note}</p>
+                )}
               </div>
 
               <ul className="space-y-3 mb-8">
@@ -264,6 +258,9 @@ const Pricing = () => {
                     <p className="text-sm text-muted-foreground mt-1">
                       {pkg.pricePerSession}€ je Session
                     </p>
+                    {pkg.note && (
+                      <p className="text-sm text-trust-badge mt-2 font-medium">{pkg.note}</p>
+                    )}
                   </div>
 
                   <ul className="space-y-3 mb-8">
