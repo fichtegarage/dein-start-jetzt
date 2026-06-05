@@ -12,11 +12,11 @@ const faqCategories = [
     questions: [
       {
         q: "Muss ich vorher schon Sport gemacht haben?",
-        a: "Nein. Mein Ansatz ist genau für Menschen gemacht, die neu einsteigen oder nach einer langen Pause wieder anfangen wollen. Kein Leistungsdruck, kein Vergleich. Nur ein Plan, der zu deinem aktuellen Stand passt.",
+        a: "Nein. Mein Ansatz ist genau für Menschen gemacht, die neu einsteigen oder nach einer langen Pause wieder anfangen wollen. Kein Leistungsdruck, kein Vergleich. Aber: auch wenn du schon länger Sport machst und das Gefühl hast, zu stagnieren kann ich dich unterstützen, das nächste Level zu erreichen.",
       },
       {
         q: "Ich habe eine Verletzung oder chronische Beschwerden. Kann ich trotzdem trainieren?",
-        a: "In vielen Fällen ja – das klären wir im kostenlosen Erstgespräch. Ich bin kein Arzt und ersetze keine medizinische Behandlung, aber ich baue dein Training so auf, dass bestehende Beschwerden berücksichtigt werden. Relevante ärztliche Empfehlungen kannst du gerne mitbringen.",
+        a: "In vielen Fällen ja – das klären wir im Erstgespräch. Ich bin kein Arzt und ersetze keine medizinische Behandlung, aber ich baue dein Training so auf, dass bestehende Beschwerden berücksichtigt werden. Relevante ärztliche Empfehlungen kannst du gerne mitbringen.",
       },
     ],
   },
@@ -25,7 +25,7 @@ const faqCategories = [
     questions: [
       {
         q: "Was passiert im kostenlosen Erstgespräch?",
-        a: "Erstgespräch und Probetraining sind ein Termin. Wir sprechen über deine Ziele, deine Geschichte, deinen Kalender - und gehen anschließend gemeinsam in Bewegung. Du lernst, wie ich coache, ich sehe, wie du dich bewegst. 60-75 Minuten, kostenlos, unverbindlich, Indoor oder Outdoor.",
+        a: "Erstgespräch und Probetraining sind ein Termin. Wir sprechen über deine Ziele, deine Geschichte, deinen Kalender - und gehen anschließend gemeinsam in Bewegung. Du lernst, wie ich coache, ich sehe, wie du dich bewegst. 60-75 Minuten, kostenlos, unverbindlich.",
       },
       {
         q: "Wo findet das Training statt?",
@@ -33,11 +33,7 @@ const faqCategories = [
       },
       {
         q: "Wie oft pro Woche sollte ich trainieren?",
-        a: "Für spürbaren Fortschritt empfehle ich 2–3 Einheiten pro Woche. Das lässt sich realistisch in einen normalen Alltag integrieren. Aber: Alles ist besser als kein Training. Auch mit einem Training pro Woche erzielt man Fortschritte.",
-      },
-      {
-        q: "Was brauche ich für das Outdoor-Training?",
-        a: "Nur bequeme Sportkleidung, Turnschuhe und eine Wasserflasche. Widerstandsbänder, Kettlebells und Matten bringe ich mit. Du musst nichts kaufen.",
+        a: "Für spürbaren Fortschritt empfehle ich zwei bis drei Einheiten pro Woche. Das lässt sich meist realistisch in einen normalen Alltag integrieren. Aber: Alles ist besser als kein Training. Auch mit einem Training pro Woche erzielt man Fortschritte.",
       },
     ],
   },
@@ -54,7 +50,7 @@ const faqCategories = [
       },
       {
         q: "Was ist, wenn ich mal eine Einheit verpasse?",
-        a: "Du sagst mir Bescheid. Bei rechtzeitiger Absage (mindestens 24 h vorher) buchen wir die Session um. Bei längerer Krankheit pausieren wir deine Laufzeit – ab zwei Wochen mit Attest. Andere Pausen halten wir vorab gemeinsam schriftlich fest. Sessions, die innerhalb deiner Laufzeit nicht genutzt werden, verfallen. Deshalb wähle ich mit dir gemeinsam ein Paket, das wirklich zu deinem Alltag passt.",
+        a: "Du sagst mir Bescheid. Bei rechtzeitiger Absage (mindestens 24 h vorher) buchen wir die Session um. Bei längerer Krankheit pausieren wir deine Laufzeit – ab zwei Wochen mit Attest. Andere Pausen - geplante wie Urlaube oder Kuren - halten wir vorab gemeinsam schriftlich fest. Sessions, die innerhalb deiner Laufzeit nicht genutzt werden, verfallen. Deshalb wähle ich mit dir gemeinsam ein Paket, das wirklich zu deinem Alltag passt.",
       },
       {
         q: "Ich habe es schon öfters versucht und immer wieder aufgehört. Warum soll es diesmal anders sein?",
