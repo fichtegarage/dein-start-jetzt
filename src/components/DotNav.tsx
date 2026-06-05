@@ -8,7 +8,6 @@ const sections = [
   { id: "ueber-mich", label: "Über mich" },
   { id: "ansatz", label: "Ansatz" },
   { id: "coach-hub", label: "App" },
-  { id: "outdoor", label: "Outdoor" },
   { id: "preise", label: "Preise" },
   { id: "faq", label: "FAQ" },
   { id: "kontakt", label: "Kontakt" },
