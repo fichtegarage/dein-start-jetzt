@@ -29,7 +29,7 @@ const faqCategories = [
       },
       {
         q: "Wo findet das Training statt?",
-        a: "Alle Sessions finden im JohnReed Augsburg statt. Du brauchst keine eigene Mitgliedschaft - du trainierst als mein Gast. Adresse und Anfahrt schicke ich dir nach dem Erstgespräch.",
+        a: "Alle Sessions finden im JohnReed Augsburg statt. Du brauchst eine Mitgliedschaft.",
       },
       {
         q: "Wie oft pro Woche sollte ich trainieren?",
