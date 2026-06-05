@@ -35,8 +35,8 @@ const Index = () => {
         <AboutMe />
         <CoachingApproach />
         <CoachHub />
-        <OutdoorTraining />
-        <OutdoorQuote />
+        {/* <OutdoorTraining /> */}
+        {/* <OutdoorQuote /> */}
         <Pricing />
         
         <CallToAction />
