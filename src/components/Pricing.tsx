@@ -120,7 +120,7 @@ const Pricing = () => {
             Pakete & Preise
           </h2>
           <p className="text-lg text-muted-foreground">
-            Drei Pakete. Eine Methode. Das Assessment ist in jedem Paket enthalten und zählt nicht als Trainings-Session. Alle Sessions finden im JohnReed Augsburg statt - eine eigene Mitgliedschaft brauchst du nicht.
+            Drei Pakete. Eine Methode. Das Assessment ist in jedem Paket enthalten und zählt nicht als Trainings-Session. Alle Sessions finden im JohnReed Augsburg statt – du brauchst eine eigene Mitgliedschaft.
           </p>
         </div>
 
