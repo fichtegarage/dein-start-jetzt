@@ -29,9 +29,6 @@ const Header = () => {
     label: "App",
     href: "#coach-hub"
   }, {
-    label: "Outdoor",
-    href: "#outdoor"
-  }, {
     label: "Preise",
     href: "#preise"
   }, {
