@@ -16,8 +16,9 @@ const Pricing = () => {
     features: [
       "Assessment inkludiert (eigene Einheit)",
       "Trainingsplan in der App",
-      "Indoor oder Outdoor pro Session frei",
+      "Sessions im JohnReed Augsburg",
       "Automatische Progression",
+      "Zubuchung möglich (anteiliger Paketpreis)",
     ],
     popular: false,
   },
@@ -29,8 +30,9 @@ const Pricing = () => {
     features: [
       "Assessment inkludiert (eigene Einheit)",
       "Trainingsplan in der App",
-      "Indoor oder Outdoor pro Session frei",
+      "Sessions im JohnReed Augsburg",
       "Automatische Progression",
+      "Zubuchung möglich (anteiliger Paketpreis)",
     ],
     popular: true,
     note: "Sweet Spot für echte Gewohnheiten",
@@ -43,8 +45,9 @@ const Pricing = () => {
     features: [
       "Assessment inkludiert (eigene Einheit)",
       "Trainingsplan in der App",
-      "Indoor oder Outdoor pro Session frei",
+      "Sessions im JohnReed Augsburg",
       "Automatische Progression",
+      "Zubuchung möglich (anteiliger Paketpreis)",
     ],
     popular: false,
     note: "Für nachhaltige Veränderung",
@@ -117,7 +120,7 @@ const Pricing = () => {
             Pakete & Preise
           </h2>
           <p className="text-lg text-muted-foreground">
-            Drei Pakete. Eine Methode. Das Assessment ist in jedem Paket enthalten und zählt nicht als Trainings-Session. Indoor und Outdoor sind gleichwertig - du entscheidest pro Session frei.
+            Drei Pakete. Eine Methode. Das Assessment ist in jedem Paket enthalten und zählt nicht als Trainings-Session. Alle Sessions finden im JohnReed Augsburg statt - eine eigene Mitgliedschaft brauchst du nicht.
           </p>
         </div>
 
@@ -176,7 +179,7 @@ const Pricing = () => {
           ))}
         </div>
 
-        {/* ── Duo-Training Accordion ── */}
+        {/* ── Duo-Training Accordion (ausgeblendet, nicht entfernt) ──
         <div className="max-w-5xl mx-auto mt-10">
           <button
             onClick={() => setDuoOpen(!duoOpen)}
@@ -206,13 +209,11 @@ const Pricing = () => {
             />
           </button>
 
-          {/* Duo content */}
           <div
             className={`overflow-hidden transition-all duration-500 ease-in-out ${
               duoOpen ? "max-h-[2000px] opacity-100 mt-6" : "max-h-0 opacity-0"
             }`}
           >
-            {/* Duo intro */}
             <div className="mb-8 px-1">
               <p className="text-muted-foreground max-w-xl">
                 Ihr trainiert gemeinsam – ich betreue euch individuell. Jede Person
@@ -223,7 +224,6 @@ const Pricing = () => {
               </p>
             </div>
 
-            {/* Duo cards */}
             <div className="grid md:grid-cols-3 gap-6">
               {duoPackages.map((pkg) => (
                 <div
@@ -286,7 +286,6 @@ const Pricing = () => {
               ))}
             </div>
 
-            {/* Duo closing note */}
             <p className="text-xs text-muted-foreground text-center mt-6">
               Noch unsicher welches Paket passt?{" "}
               <button
@@ -298,6 +297,7 @@ const Pricing = () => {
             </p>
           </div>
         </div>
+        ── Ende Duo-Accordion ── */}
       </div>
     </section>
   );
