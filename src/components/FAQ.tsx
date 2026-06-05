@@ -63,7 +63,7 @@ const faqCategories = [
     questions: [
       {
         q: "Was ist der Unterschied zwischen den drei Paketen?",
-        a: "Die Leistungen sind in allen drei Paketen identisch: Assessment, Trainingsplan in der App, Indoor oder Outdoor pro Session frei wählbar, automatische Progression. Unterschiedlich sind nur Session-Anzahl und Laufzeit: Starter (5 Sessions, 3 Monate) zum Kennenlernen, Transformation (10 Sessions, 6 Monate) als Sweet Spot für echte Gewohnheiten, Intensiv (20 Sessions, 12 Monate) für nachhaltige Veränderung.",
+        a: "Die Leistungen sind in allen drei Paketen identisch: Assessment, Trainingsplan in der App, automatische Progression. Unterschiedlich sind nur Session-Anzahl und Laufzeit: Starter (5 Sessions, 3 Monate) zum Kennenlernen, Transformation (10 Sessions, 6 Monate) als Sweet Spot für echte Gewohnheiten, Intensiv (20 Sessions, 12 Monate) für nachhaltige Veränderung.",
       },
       {
         q: "Gibt es einen Vertrag oder eine Kündigungsfrist?",
