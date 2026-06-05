@@ -29,7 +29,7 @@ const faqCategories = [
       },
       {
         q: "Wo findet das Training statt?",
-        a: "Indoor bei JohnReed Augsburg, Outdoor in einem der Augsburger Parks - den konkreten Standort legen wir beim Assessment fest, gemeinsam mit der Entscheidung, ob Indoor oder Outdoor die Trainingsplan-Basis wird. Pro einzelner Session bleibst du trotzdem frei.",
+        a: "Alle Sessions finden im JohnReed Augsburg statt. Du brauchst keine eigene Mitgliedschaft - du trainierst als mein Gast. Adresse und Anfahrt schicke ich dir nach dem Erstgespräch.",
       },
       {
         q: "Wie oft pro Woche sollte ich trainieren?",
@@ -84,6 +84,10 @@ const faqCategories = [
       {
         q: "Kann ich nach dem Starter-Paket zu einem größeren Paket wechseln?",
         a: "Ja, das ist jederzeit möglich.",
+      },
+      {
+        q: "Was, wenn ich innerhalb meiner Laufzeit mehr Sessions brauche?",
+        a: "Du kannst innerhalb deiner Paketlaufzeit jederzeit zusätzliche Sessions zubuchen. Der Preis pro Zusatz-Session entspricht dem anteiligen Paketpreis - bei Transformation also 89 € pro Zusatz-Session. Sag mir einfach Bescheid.",
       },
     ],
   },
