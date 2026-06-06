@@ -10,6 +10,7 @@ import AboutMe from "@/components/AboutMe";
 import OutdoorTraining from "@/components/OutdoorTraining";
 import OutdoorQuote from "@/components/OutdoorQuote";
 import Pricing from "@/components/Pricing";
+import { Testimonials } from "@/components/Testimonials";
 
 import CallToAction from "@/components/CallToAction";
 import FAQ from "@/components/FAQ";
@@ -33,6 +34,7 @@ const Index = () => {
         <Philosophy />
         <TargetAudience />
         <AboutMe />
+        <Testimonials />
         <CoachingApproach />
         <CoachHub />
         {/* <OutdoorTraining /> */}
