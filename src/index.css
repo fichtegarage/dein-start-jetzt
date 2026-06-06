@@ -8,13 +8,97 @@
   All colors MUST be HSL.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+/* ======================================================
+   Lokale Schriftarten (DSGVO-konform, kein Google Fonts)
+   Ersetzt externe Google Fonts @import-URLs.
+   Quelle: @fontsource-Pakete (latin-Subset, nur genutzte Gewichte)
+   ====================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+/* Inter */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-latin-400-normal.woff2') format('woff2'),
+       url('/fonts/inter-latin-400-normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/inter-latin-500-normal.woff2') format('woff2'),
+       url('/fonts/inter-latin-500-normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/inter-latin-600-normal.woff2') format('woff2'),
+       url('/fonts/inter-latin-600-normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-latin-700-normal.woff2') format('woff2'),
+       url('/fonts/inter-latin-700-normal.woff') format('woff');
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap");
+/* Lora */
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/lora-latin-400-normal.woff2') format('woff2'),
+       url('/fonts/lora-latin-400-normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/lora-latin-500-normal.woff2') format('woff2'),
+       url('/fonts/lora-latin-500-normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/lora-latin-600-normal.woff2') format('woff2'),
+       url('/fonts/lora-latin-600-normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'Lora';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/lora-latin-700-normal.woff2') format('woff2'),
+       url('/fonts/lora-latin-700-normal.woff') format('woff');
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+/* Space Mono */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/space-mono-latin-400-normal.woff2') format('woff2'),
+       url('/fonts/space-mono-latin-400-normal.woff') format('woff');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/space-mono-latin-700-normal.woff2') format('woff2'),
+       url('/fonts/space-mono-latin-700-normal.woff') format('woff');
+}
 
 @layer base {
   :root {
