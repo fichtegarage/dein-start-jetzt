@@ -34,7 +34,7 @@ const Datenschutz = () => {
             <p className="mt-2">Jakob Neumann</p>
             <p>Milchberg 8</p>
             <p>86150 Augsburg</p>
-            <p>E-Mail: jakob.neumann@posteo.de</p>
+            <p>E-Mail: hallo@jakob-neumann.net</p>
             <p>Telefon: 0155 67251650</p>
           </div>
 
