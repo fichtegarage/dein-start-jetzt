@@ -35,7 +35,7 @@ const Impressum = () => {
           <div>
             <h2 className="text-lg font-semibold mb-2">Kontakt</h2>
             <p>Telefon: 0155 67251650</p>
-            <p>E-Mail: jakob.neumann@posteo.de</p>
+            <p>E-Mail: hallo@jakob-neumann.net</p>
           </div>
 
           <div>
