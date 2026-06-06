@@ -22,7 +22,7 @@ interface SEOHeadProps {
  */
 const SEOHead = ({
   title = "Personal Trainer Augsburg | Jakob Neumann Training",
-  description = "Personal Training & Gruppenkurse in Augsburg mit Jakob Neumann. Individuell, draußen und wirkungsvoll. Jetzt kostenloses Erstgespräch vereinbaren.",
+  description = "Persönliches Indoor-Personal-Training in Augsburg. Einzelsessions im JohnReed Augsburg, App-gestützte Trainingspläne, persönliche Begleitung. Aufbauen, nicht aufpumpen.",
   canonical = "https://www.jakob-neumann.net/",
   noIndex = false,
 }: SEOHeadProps) => {
