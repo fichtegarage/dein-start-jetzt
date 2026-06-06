@@ -34,11 +34,11 @@ const Index = () => {
         <Philosophy />
         <TargetAudience />
         <AboutMe />
-        <Testimonials />
         <CoachingApproach />
         <CoachHub />
         {/* <OutdoorTraining /> */}
         {/* <OutdoorQuote /> */}
+        <Testimonials />
         <Pricing />
         
         <CallToAction />
