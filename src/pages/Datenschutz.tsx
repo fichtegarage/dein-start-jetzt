@@ -21,7 +21,7 @@ const Datenschutz = () => {
       <main className="container py-16 max-w-2xl">
         <h1 className="text-3xl font-bold mb-4">Datenschutzerklärung</h1>
         <p className="text-sm text-muted-foreground mb-10">
-          Website jakob-neumann.net · Stand: 9. Juni 2026 · Version 3
+          Website jakob-neumann.net · Stand: 11. Juni 2026 · Version 4
         </p>
 
         <section className="space-y-10 text-foreground leading-relaxed">
@@ -86,7 +86,7 @@ const Datenschutz = () => {
           <div>
             <h2 className="text-lg font-semibold mb-2">6. Keine Terminbuchung auf dieser Website – Hinweis zur App „Coach Hub"</h2>
             <p>Auf dieser Website findet <strong>keine Terminbuchung</strong> statt, und es ist <strong>kein externes Buchungstool</strong> eingebunden. Beratungsgespräche und Training werden über die separate App „Coach Hub" unter <strong>buchung.jakob-neumann.net</strong> organisiert. Diese Website verlinkt lediglich dorthin.</p>
-            <p className="mt-2">„Coach Hub" ist eine eigenständige Anwendung mit einer <strong>eigenen Datenschutzerklärung</strong> [Link: Datenschutzerklärung Coach Hub]; ihre Datenverarbeitung ist nicht Gegenstand dieser Erklärung. Sobald du dem Link folgst, verlässt du diese Website.</p>
+            <p className="mt-2">„Coach Hub" ist eine eigenständige Anwendung mit einer <strong>eigenen Datenschutzerklärung</strong> (<a href="https://buchung.jakob-neumann.net/datenschutz" target="_blank" rel="noopener noreferrer" className="underline">Datenschutzerklärung Coach Hub</a>); ihre Datenverarbeitung ist nicht Gegenstand dieser Erklärung. Sobald du dem Link folgst, verlässt du diese Website.</p>
           </div>
 
           <div>
