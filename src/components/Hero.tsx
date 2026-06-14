@@ -1,12 +1,10 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import jakobFoto from "@/assets/jakob-foto.jpg";
+
+const BUCHUNG_URL = "https://buchung.jakob-neumann.net/erstgespraech?src=website";
+
 const Hero = () => {
-  const scrollToContact = () => {
-    document.getElementById("kontakt")?.scrollIntoView({
-      behavior: "smooth"
-    });
-  };
   const scrollToContent = () => {
     document.getElementById("zielgruppe")?.scrollIntoView({
       behavior: "smooth"
@@ -36,9 +34,11 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{
             animationDelay: "0.3s"
           }}>
-              <Button onClick={scrollToContact} size="lg" className="h-12 px-8 text-[15px] font-medium rounded-full group">
-                Kostenloses Erstgespräch buchen
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              <Button asChild size="lg" className="h-12 px-8 text-[15px] font-medium rounded-full group">
+                <a href={BUCHUNG_URL} target="_blank" rel="noopener noreferrer">
+                  Kostenloses Erstgespräch buchen
+                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+                </a>
               </Button>
             </div>
           </div>
