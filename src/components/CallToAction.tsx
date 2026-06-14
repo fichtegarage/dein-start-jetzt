@@ -2,11 +2,10 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
+const BUCHUNG_URL = "https://buchung.jakob-neumann.net/erstgespraech?src=website";
+
 const CallToAction = () => {
   const { ref, isVisible } = useScrollAnimation();
-  const scrollToContact = () => {
-    document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section className="section-padding section-alt">
@@ -20,18 +19,16 @@ const CallToAction = () => {
 
           </p>
 
-          <Button
-            onClick={scrollToContact}
-            size="lg"
-            className="h-12 px-8 text-[15px] font-medium rounded-full group">
-
-            Gespräch buchen
-            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          <Button asChild size="lg" className="h-12 px-8 text-[15px] font-medium rounded-full group">
+            <a href={BUCHUNG_URL} target="_blank" rel="noopener noreferrer">
+              Gespräch buchen
+              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            </a>
           </Button>
         </div>
       </div>
-    </section>);
-
+    </section>
+  );
 };
 
 export default CallToAction;
