@@ -1,3 +1,7 @@
+// src/components/CoachHub.tsx
+// Brand Guide V1.1: trust-badge entfernt → Nachtblau #1B3A5C
+// Icon-Stroke 1.5 im Fließtext (Brand Guide)
+
 import { Smartphone, ClipboardList, TrendingUp, Activity } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
@@ -41,7 +45,7 @@ const CoachHub = () => {
       >
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12 md:mb-14">
-            <p className="text-sm font-medium text-muted-foreground tracking-wide mb-3">
+            <p className="text-[13px] font-medium tracking-[0.06em] uppercase mb-3" style={{ color: "#3A4459" }}>
               Coach Hub · mein USP
             </p>
             <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">
@@ -56,10 +60,18 @@ const CoachHub = () => {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="flex gap-4 p-5 rounded-xl transition-all duration-300 hover:bg-card hover:shadow-soft hover:-translate-y-0.5 cursor-default"
+                className="flex gap-4 p-5 rounded-xl card-hover cursor-default"
               >
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-trust-badge/10 flex items-center justify-center mt-0.5">
-                  <feature.icon className="w-5 h-5 text-trust-badge" strokeWidth={1.5} />
+                {/* Icon-Container: Nachtblau-Hintergrund statt trust-badge */}
+                <div
+                  className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center mt-0.5"
+                  style={{ backgroundColor: "#1B3A5C1A" /* Nachtblau 10% */ }}
+                >
+                  <feature.icon
+                    className="w-5 h-5"
+                    style={{ color: "#1B3A5C" }}
+                    strokeWidth={1.5}
+                  />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1.5">{feature.title}</h3>
