@@ -6,7 +6,7 @@
 //   Ink-Skala: #0F1A2E / #1F2A40 / #3A4459, Rule #C5BFB2
 // - Eckradius: 24px für Quote-Block (laut Brand Guide "QUOTE")
 // - Kein Lora, kein Anführungszeichen-Ornament als Pseudo-Icon
-// - Eyebrow: 13px / 500 / +6% tracking (CAPS)
+// - Eyebrow: 13px / 500 / +6% tracking (CAPS) — Farbe Nachtblau #1B3A5C (GPL-Lock)
 // - H2: 30px / 600 / -2.5% tracking
 // - Body: 15px / 400 / -0.5% tracking
 // - Keine Ausrufezeichen, keine Emoji
@@ -107,7 +107,7 @@ export function Testimonials() {
               fontWeight: 500,
               letterSpacing: "0.06em",
               textTransform: "uppercase" as const,
-              color: "#1A47D9",
+              color: "#1B3A5C", /* Nachtblau — war #1A47D9, korrigiert per GPL */
             }}
           >
             Stimmen
@@ -138,7 +138,7 @@ export function Testimonials() {
             }}
           >
             Keine bezahlten Bewertungen. Zwei Menschen, mit denen ich
-            trainiere - in ihren eigenen Worten.
+            trainiere — in ihren eigenen Worten.
           </p>
         </div>
 
