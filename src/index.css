@@ -1,18 +1,24 @@
-/* ─────────────────────────────────────────────────────────────────────────────
-   Jakob Neumann Training — src/index.css
-   Brand Guide V1.1 · Token-System · Phase 2 final (Inter-only, kein Gradient)
-   ───────────────────────────────────────────────────────────────────────────── */
++/* NEU-245: Google Fonts @import entfernt — alle Familien lokal gehostet (DSGVO-Compliance).
+   Quelle: @fontsource latin-Subset, woff2, nur genutzte Gewichte (400/500/600/700).
+   Keine Runtime-Dependency — Dateien als statische Assets in public/fonts/. */
 
-/* ── Inter (lokal, DSGVO) ──────────────────────────────────────────────────── */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url('/fonts/inter-latin-variable-wghtOnly-normal.woff2') format('woff2');
-}
+/* Inter — Body-Font (index.css:78, tailwind.config.ts: font-sans) */
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/inter-400.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/inter-500.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/inter-600.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/inter-700.woff2') format('woff2'); }
 
-/* Lora und Space Mono entfernt (Brand Guide V1.1: Inter-only) */
+/* Space Grotesk — Display-Font (index.css:82, tailwind.config.ts: font-display) */
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/space-grotesk-400.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/space-grotesk-500.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/space-grotesk-600.woff2') format('woff2'); }
+@font-face { font-family: 'Space Grotesk'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/space-grotesk-700.woff2') format('woff2'); }
+
+/* Montserrat — Inline-Styles (9 Stellen in 7 Komponenten/Pages, unverändert per GPL-Entscheid) */
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 400; font-display: swap; src: url('/fonts/montserrat-400.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/montserrat-500.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/montserrat-600.woff2') format('woff2'); }
+@font-face { font-family: 'Montserrat'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/montserrat-700.woff2') format('woff2'); }
 
 @tailwind base;
 @tailwind components;
@@ -20,133 +26,65 @@
 
 @layer base {
   :root {
-    /* ── Brand Palette V1.1 ─────────────────────────────────────────────────
-       Mitternacht  #0F1A2E  → HSL 216 51% 12%
-       Warm Creme   #F4F2ED  → HSL 40  20% 94%
-       Sand         #ECEAE4  → HSL 40  14% 90%
-       Surface Weiß #FFFFFF  → HSL 0    0% 100%
-       Nachtblau    #1B3A5C  → HSL 210 54% 23%
-       Ink 1        #0F1A2E  → HSL 216 51% 12%
-       Ink 2        #1F2A40  → HSL 216 34% 18%
-       Ink 3        #3A4459  → HSL 220 21% 29%
-       Rule         #C5BFB2  → HSL 37   9% 73%
-       Bone         #E2DFD8  → HSL 40  12% 86%
-    ────────────────────────────────────────────────────────────────────────── */
+    /* ============================================
+       STRONGER EVERY DAY – Dark Theme
+       Kupfer/Orange Akzent auf Slate-Basis
+       ============================================ */
+    
+    /* Backgrounds - Slate-Töne */
+    --background: 222.2 84% 4.9%;          /* #0F172A - Slate 900 */
+    --foreground: 210 40% 98%;             /* #F8FAFC - Slate 50 */
 
-    /* Background & Surface */
-    --background: 40 20% 94%;          /* Warm Creme #F4F2ED */
-    --foreground: 216 51% 12%;         /* Ink 1 / Mitternacht #0F1A2E */
+    --card: 222.2 47.4% 11.2%;             /* #1E293B - Slate 800 */
+    --card-foreground: 210 40% 98%;        /* #F8FAFC */
 
-    --card: 0 0% 100%;                 /* Surface Weiß #FFFFFF */
-    --card-foreground: 216 51% 12%;
+    --popover: 222.2 47.4% 11.2%;          /* #1E293B - Slate 800 */
+    --popover-foreground: 210 40% 98%;     /* #F8FAFC */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 216 51% 12%;
+    /* Primary - Kupfer/Orange (Brand) */
+    --primary: 20 89% 40%;                 /* #C2410C - Orange 700 */
+    --primary-foreground: 33 100% 96%;     /* #FFF7ED - Orange 50 */
 
-    /* Primary — Mitternacht (Buttons, Headlines) */
-    --primary: 216 51% 12%;            /* #0F1A2E */
-    --primary-foreground: 40 20% 94%;  /* Warm Creme #F4F2ED */
+    /* Secondary - Slate 700 */
+    --secondary: 217.2 32.6% 17.5%;        /* #334155 - Slate 700 */
+    --secondary-foreground: 210 40% 98%;   /* #F8FAFC */
 
-    /* Secondary — Sand */
-    --secondary: 40 14% 90%;           /* #ECEAE4 */
-    --secondary-foreground: 216 51% 12%;
+    /* Muted - Slate 700 */
+    --muted: 217.2 32.6% 17.5%;            /* #334155 - Slate 700 */
+    --muted-foreground: 215 20.2% 65.1%;   /* #94A3B8 - Slate 400 */
 
-    /* Muted */
-    --muted: 40 14% 90%;
-    --muted-foreground: 220 21% 29%;   /* Ink 3 #3A4459 */
+    /* Accent - Orange 500 (hellere Variante) */
+    --accent: 24.6 95% 53.1%;              /* #F97316 - Orange 500 */
+    --accent-foreground: 20.5 14.3% 4.1%;  /* #431407 - Orange 950 */
 
-    /* Accent — Nachtblau */
-    --accent: 210 54% 23%;             /* #1B3A5C */
-    --accent-foreground: 40 20% 94%;
+    /* Destructive - Red */
+    --destructive: 0 84.2% 60.2%;          /* #EF4444 - Red 500 */
+    --destructive-foreground: 0 0% 98%;    /* White */
 
-    /* Destructive */
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+    /* Border & Input - Slate 600 */
+    --border: 215.4 20.2% 35%;             /* #475569 - Slate 600 */
+    --input: 217.2 32.6% 17.5%;            /* #334155 - Slate 700 */
+    --ring: 20 89% 40%;                    /* #C2410C - Orange 700 (Focus) */
 
-    /* Borders & Inputs */
-    --border: 37 9% 73%;               /* Rule #C5BFB2 */
-    --input: 40 14% 90%;               /* Sand */
-    --ring: 210 54% 23%;               /* Nachtblau */
+    --radius: 0.625rem;
 
-    --radius: 0.5rem;
+    /* Sidebar - Slate Varianten */
+    --sidebar-background: 222.2 84% 4.9%;  /* #0F172A - Slate 900 */
+    --sidebar-foreground: 215 20.2% 65.1%; /* #94A3B8 - Slate 400 */
+    --sidebar-primary: 20 89% 40%;         /* #C2410C - Orange 700 */
+    --sidebar-primary-foreground: 33 100% 96%; /* #FFF7ED */
+    --sidebar-accent: 217.2 32.6% 17.5%;   /* #334155 - Slate 700 */
+    --sidebar-accent-foreground: 210 40% 98%; /* #F8FAFC */
+    --sidebar-border: 215.4 20.2% 25%;     /* Slate 700 border */
+    --sidebar-ring: 20 89% 40%;            /* #C2410C */
 
-    /* Custom Coach Tokens */
-    --section-alt: 40 14% 90%;         /* Sand #ECEAE4 */
-    /* --hero-gradient-* entfernt (Hero ist jetzt flaches bg-background) */
-    /* --trust-badge entfernt (kein Brand-Wert, kein funktionaler Status-Einsatz hier) */
-
-    /* Sidebar */
-    --sidebar-background: 40 20% 94%;
-    --sidebar-foreground: 216 51% 12%;
-    --sidebar-primary: 216 51% 12%;
-    --sidebar-primary-foreground: 40 20% 94%;
-    --sidebar-accent: 40 14% 90%;
-    --sidebar-accent-foreground: 216 51% 12%;
-    --sidebar-border: 37 9% 73%;
-    --sidebar-ring: 210 54% 23%;
-    --sidebar: 40 14% 90%;
-
-    /* Chart */
-    --chart-1: 216 34% 18%;
-    --chart-2: 220 21% 29%;
-    --chart-3: 37 9% 73%;
-    --chart-4: 210 54% 23%;
-    --chart-5: 40 12% 86%;
-
-    /* Shadows */
-    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.04);
-    --shadow-xs:  0 1px 3px 0px hsl(0 0% 0% / 0.04);
-    --shadow-sm:  0 1px 3px 0px hsl(0 0% 0% / 0.07), 0 1px 2px -1px hsl(0 0% 0% / 0.07);
-    --shadow:     0 1px 3px 0px hsl(0 0% 0% / 0.08), 0 1px 2px -1px hsl(0 0% 0% / 0.08);
-    --shadow-md:  0 1px 3px 0px hsl(0 0% 0% / 0.08), 0 2px 4px -1px hsl(0 0% 0% / 0.08);
-    --shadow-lg:  0 1px 3px 0px hsl(0 0% 0% / 0.08), 0 4px 6px -1px hsl(0 0% 0% / 0.08);
-    --shadow-xl:  0 1px 3px 0px hsl(0 0% 0% / 0.08), 0 8px 10px -1px hsl(0 0% 0% / 0.08);
-    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.18);
-
-    --tracking-normal: 0em;
-    --spacing: 0.25rem;
-  }
-
-  .dark {
-    --background: 216 51% 8%;
-    --foreground: 40 20% 94%;
-
-    --card: 216 34% 13%;
-    --card-foreground: 40 20% 94%;
-
-    --popover: 216 34% 13%;
-    --popover-foreground: 40 20% 94%;
-
-    --primary: 40 20% 94%;
-    --primary-foreground: 216 51% 12%;
-
-    --secondary: 216 34% 18%;
-    --secondary-foreground: 40 20% 94%;
-
-    --muted: 216 34% 18%;
-    --muted-foreground: 37 9% 73%;
-
-    --accent: 210 54% 30%;
-    --accent-foreground: 40 20% 94%;
-
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 216 34% 18%;
-    --input: 216 34% 18%;
-    --ring: 210 54% 30%;
-
-    --section-alt: 216 34% 13%;
-
-    --sidebar-background: 216 51% 8%;
-    --sidebar-foreground: 40 20% 94%;
-    --sidebar-primary: 40 20% 94%;
-    --sidebar-primary-foreground: 216 51% 12%;
-    --sidebar-accent: 216 34% 18%;
-    --sidebar-accent-foreground: 40 20% 94%;
-    --sidebar-border: 216 34% 18%;
-    --sidebar-ring: 210 54% 30%;
-    --sidebar: 216 34% 13%;
+    /* Semantic Colors */
+    --warning: 48 96% 53%;                 /* #EAB308 - Yellow 500 */
+    --warning-foreground: 28 73% 12%;      /* Dark brown */
+    --success: 142 71% 45%;                /* #22C55E - Green 500 */
+    --success-foreground: 138 76% 10%;     /* Dark green */
+    --info: 217 91% 60%;                   /* #3B82F6 - Blue 500 */
+    --info-foreground: 214 100% 97%;       /* Light blue */
   }
 }
 
@@ -155,61 +93,104 @@
     @apply border-border;
   }
 
-  html {
-    scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    letter-spacing: -0.011em;
+    font-family: 'Inter', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-semibold;
-    letter-spacing: -0.025em;
-  }
-
-  h1 {
-    letter-spacing: -0.035em;
+    font-family: 'Space Grotesk', sans-serif;
   }
 }
 
-@layer components {
-  .section-padding {
-    @apply px-6 py-20 md:px-8 md:py-[6.5rem];
+@layer utilities {
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-xl;
   }
-
-  .section-alt {
-    background-color: hsl(var(--section-alt));
+  
+  .stat-glow {
+    box-shadow: 0 0 20px -5px hsl(var(--primary) / 0.15);
   }
-
-  .container-tight {
-    @apply max-w-3xl mx-auto;
+  
+  /* Accent Button Glow */
+  .accent-glow {
+    box-shadow: 0 0 20px -5px hsl(var(--accent) / 0.3);
   }
-
-  .card-hover {
-    transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
-                box-shadow 300ms cubic-bezier(0.16, 1, 0.3, 1);
+  
+  /* Primary Button Hover Glow */
+  .primary-glow:hover {
+    box-shadow: 0 4px 20px -5px hsl(var(--primary) / 0.4);
   }
-  .card-hover:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 16px 0 hsl(216 51% 12% / 0.10);
+  
+  /* Success Indicator */
+  .success-glow {
+    box-shadow: 0 0 12px -3px hsl(var(--success) / 0.4);
   }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+/* ============================================================
+   NEU-225 Schritt 2: Brand-Light-Scope für öffentliche Funnel-Seiten
+   (Erstgespräch, Bestätigt — später ggf. /datenschutz + /start)
+   Überschreibt shadcn-Token NUR im DOM-Subtree .brand-light.
+   :root (Dark) wird NICHT berührt → kein Leak in die eingeloggte App.
+   Mechanismus identisch zu shadcn .dark{…}-Pattern, hier .brand-light{…}.
+   HSL-Werte via Hex→HSL-Tool verifiziert (14.06.2026).
+   ============================================================ */
+.brand-light {
+  /* Backgrounds */
+  --background: 43 24% 94%;      /* Warm Creme   #F4F2ED */
+  --foreground: 219 51% 12%;     /* Ink/Mittern.  #0F1A2E */
+
+  /* Card / Popover — Surface Weiß */
+  --card: 0 0% 100%;             /* #FFFFFF */
+  --card-foreground: 219 51% 12%; /* Ink #0F1A2E */
+  --popover: 0 0% 100%;
+  --popover-foreground: 219 51% 12%;
+
+  /* Primary — Mitternacht (Fill) + Creme/Weiß (Text) */
+  --primary: 219 51% 12%;        /* #0F1A2E */
+  --primary-foreground: 43 24% 94%; /* #F4F2ED — HELL auf DUNKEL ✓ */
+
+  /* Secondary — Sand */
+  --secondary: 45 17% 91%;       /* #ECEAE4 */
+  --secondary-foreground: 219 51% 12%; /* Ink */
+
+  /* Muted — Bone */
+  --muted: 42 15% 87%;           /* #E2DFD8 */
+  --muted-foreground: 221 21% 29%; /* Ink-soft #3A4459 */
+
+  /* Accent — Nachtblau (links, hover-states) + Creme (foreground) */
+  --accent: 211 55% 23%;         /* #1B3A5C */
+  --accent-foreground: 43 24% 94%; /* #F4F2ED — HELL auf DUNKEL ✓ */
+
+  /* Destructive — Standard Rot beibehalten */
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  /* Border / Input / Ring */
+  --border: 41 14% 74%;          /* Rule #C5BFB2 */
+  --input: 41 14% 74%;           /* Rule #C5BFB2 */
+  --ring: 211 55% 23%;           /* Nachtblau #1B3A5C */
+
+  /* Typography: Inter als Body-Font, Space Grotesk für Headlines */
+  font-family: 'Inter', sans-serif;
 }
-::-webkit-scrollbar-track {
-  background: transparent;
+
+/* Headlines im brand-light-Scope: Space Grotesk, kein Montserrat */
+.brand-light h1,
+.brand-light h2,
+.brand-light h3,
+.brand-light h4,
+.brand-light h5,
+.brand-light h6 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.025em;
 }
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground) / 0.5);
+
+/* Body-Text im brand-light-Scope: Inter mit leichtem Negative-Tracking */
+.brand-light p,
+.brand-light label,
+.brand-light span,
+.brand-light li {
+  letter-spacing: -0.011em;
 }
