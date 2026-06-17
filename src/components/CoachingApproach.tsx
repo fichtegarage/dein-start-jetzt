@@ -26,7 +26,7 @@ const CoachingApproach = () => {
     {
       title: "Langfristige Routinen",
       description:
-        "Motivation kommt und geht. Routine bleibt. Ich zeige dir, wie du dranbleibst. Auch an schlechten Tagen.",
+        "Motivation kommt und geht. Routine bleibt. Im Coaching schauen wir gemeinsam darauf, was dich dranbleiben lässt – auch an Tagen, an denen die Energie kleiner ist.",
     },
   ];
 
@@ -44,7 +44,7 @@ const CoachingApproach = () => {
               Mein Ansatz
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Training ist kein Wettkampf gegen dich selbst. Es ist ein Prozess, an dessen Ende ein stärkeres Du steht.
+              Es ist ein Prozess, in dem du Schritt für Schritt mit deinem Körper vertrauter wirst.
             </p>
           </div>
 

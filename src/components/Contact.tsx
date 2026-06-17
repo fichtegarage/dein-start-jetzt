@@ -78,7 +78,7 @@ const Contact = () => {
 
       setIsSubmitted(true);
       toast({
-        title: "Nachricht gesendet!",
+        title: "Nachricht gesendet.",
         description: "Ich melde mich innerhalb von 24 Stunden bei dir.",
       });
 
@@ -117,7 +117,7 @@ const Contact = () => {
                 <div className="w-14 h-14 rounded-full bg-trust-badge/10 flex items-center justify-center mb-4">
                   <CheckCircle className="w-7 h-7 text-trust-badge" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Nachricht gesendet!</h3>
+                <h3 className="text-xl font-semibold mb-2">Nachricht gesendet.</h3>
                 <p className="text-muted-foreground">
                   Ich melde mich innerhalb von 24 Stunden.
                 </p>

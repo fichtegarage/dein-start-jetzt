@@ -50,7 +50,7 @@ const faqCategories = [
       },
       {
         q: "Was ist, wenn ich mal eine Einheit verpasse?",
-        a: "Du sagst mir Bescheid. Bei rechtzeitiger Absage (mindestens 24 h vorher) buchen wir die Session um. Bei längerer Krankheit pausieren wir deine Laufzeit – ab zwei Wochen mit Attest. Andere Pausen - geplante wie Urlaube oder Kuren - halten wir vorab gemeinsam schriftlich fest. Sessions, die innerhalb deiner Laufzeit nicht genutzt werden, verfallen. Deshalb wähle ich mit dir gemeinsam ein Paket, das wirklich zu deinem Alltag passt.",
+        a: "Du sagst mir Bescheid. Bei rechtzeitiger Absage (mindestens 24 h vorher) buchen wir die Session um. Bei kurzfristiger Absage oder Nichterscheinen verfällt die einzelne Session. Bei längerer Krankheit pausieren wir deine Laufzeit – ab zwei Wochen mit Attest. Andere Pausen – geplante wie Urlaube oder Kuren – halten wir vorab gemeinsam schriftlich fest. Sessions, die am Ende deiner Laufzeit übrig sind, verfallen nicht – du bekommst eine Gutschrift, die du innerhalb von 12 Monaten auf ein Folgepaket anrechnen kannst. Das Assessment ist davon ausgenommen.",
       },
       {
         q: "Ich habe es schon öfters versucht und immer wieder aufgehört. Warum soll es diesmal anders sein?",
@@ -66,8 +66,8 @@ const faqCategories = [
         a: "Die Leistungen sind in allen drei Paketen identisch: Assessment, Trainingsplan in der App, automatische Progression. Unterschiedlich sind nur Session-Anzahl und Laufzeit: Starter (5 Sessions, 3 Monate) zum Kennenlernen, Transformation (10 Sessions, 6 Monate) als Sweet Spot für echte Gewohnheiten, Intensiv (20 Sessions, 12 Monate) für nachhaltige Veränderung.",
       },
       {
-        q: "Gibt es einen Vertrag oder eine Kündigungsfrist?",
-        a: "Nein. Du kaufst ein Paket – kein Abo, kein Vertrag, keine Kündigungsfrist.",
+        q: "Wie bin ich vertraglich gebunden?",
+        a: "Du schließt mit mir einen schriftlichen Vertrag über das gewählte Paket ab – mit einer festen Laufzeit (3, 6 oder 12 Monate). Es gibt kein Abo und nichts, was sich automatisch verlängert. Eine ordentliche Kündigung mitten in der Laufzeit ist nicht vorgesehen, eine außerordentliche aus wichtigem Grund (z. B. längere Erkrankung) ist beidseitig möglich. Sessions, die am Ende der Laufzeit übrig sind, verfallen nicht – sie werden als Gutschrift auf ein Folgepaket angerechnet, 12 Monate gültig.",
       },
       {
         q: "Kann ich auch Einzeleinheiten buchen?",
@@ -83,7 +83,7 @@ const faqCategories = [
       },
       {
         q: "Was, wenn ich innerhalb meiner Laufzeit mehr Sessions brauche?",
-        a: "Du kannst innerhalb deiner Paketlaufzeit jederzeit zusätzliche Sessions zubuchen. Der Preis pro Zusatz-Session entspricht dem anteiligen Paketpreis - bei Transformation also 89 € pro Zusatz-Session. Sag mir einfach Bescheid.",
+        a: "Du kannst innerhalb deiner Paketlaufzeit jederzeit zusätzliche Sessions zubuchen. Der Preis pro Zusatz-Session entspricht dem regulären anteiligen Paketpreis – bei Transformation also 89 € pro Zusatz-Session, auch dann, wenn du dein Paket über eine Aktion vergünstigt bekommen hast. Sag mir einfach Bescheid.",
       },
     ],
   },
