@@ -27,7 +27,7 @@ const TargetAudience = () => {
     {
       title: "Mehr Selbstwertgefühl",
       description:
-        "Du möchtest dich in deinem Körper wohler und stärker fühlen? Aus unserer gemeinsamen Reise gehst du nicht nur stärker raus. Du gehst selbstbewusster raus.",
+        "Du möchtest dich in deinem Körper wohler und stärker fühlen? Im Coaching arbeiten wir gemeinsam an Kraft und Selbstvertrauen – beides hängt enger zusammen, als die meisten denken.",
     },
   ];
 
