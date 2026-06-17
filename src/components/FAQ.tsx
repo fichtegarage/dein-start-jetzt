@@ -79,7 +79,7 @@ const faqCategories = [
       },
       {
         q: "Kann ich nach dem Starter-Paket zu einem größeren Paket wechseln?",
-        a: "Ja, das ist jederzeit möglich.",
+        a: "Wenn dein Paket ausläuft, entscheidest du frei neu und kannst direkt ein größeres wählen. Und schon während deiner Laufzeit kannst du jederzeit zusätzliche Sessions zubuchen – zum regulären anteiligen Preis.",
       },
       {
         q: "Was, wenn ich innerhalb meiner Laufzeit mehr Sessions brauche?",
