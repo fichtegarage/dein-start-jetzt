@@ -7,6 +7,7 @@ import TargetAudience from "@/components/TargetAudience";
 import CoachingApproach from "@/components/CoachingApproach";
 import CoachHub from "@/components/CoachHub";
 import AboutMe from "@/components/AboutMe";
+import Gallery from "@/components/Gallery";
 import OutdoorTraining from "@/components/OutdoorTraining";
 import OutdoorQuote from "@/components/OutdoorQuote";
 import Pricing from "@/components/Pricing";
@@ -34,6 +35,7 @@ const Index = () => {
         <Philosophy />
         <TargetAudience />
         <AboutMe />
+        <Gallery />
         <CoachingApproach />
         <CoachHub />
         {/* <OutdoorTraining /> */}
