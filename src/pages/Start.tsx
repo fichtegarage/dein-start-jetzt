@@ -7,7 +7,6 @@
 import SEOHead from "@/components/SEOHead";
 import StartHero from "@/components/StartHero";
 import StartInlineCta from "@/components/StartInlineCta";
-import StartBookingPreview from "@/components/StartBookingPreview";
 import CoachingApproach from "@/components/CoachingApproach";
 import CoachHub from "@/components/CoachHub";
 import { Testimonials } from "@/components/Testimonials";
@@ -59,12 +58,6 @@ const Start = () => {
         <Pricing compact ctaHref={bookingUrl} ctaTarget="_self" />
 
         <FAQ includeIds={START_FAQ_IDS} hideFooterNote />
-
-        <section className="section-padding">
-          <div className="container">
-            <StartBookingPreview />
-          </div>
-        </section>
 
         <CallToAction
           ctaHref={bookingUrl}
