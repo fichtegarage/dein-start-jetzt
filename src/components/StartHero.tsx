@@ -2,11 +2,12 @@
 // Eigener, schlanker Hero für Google-Ads-Landing /start.
 // Bewusst NICHT Hero.tsx wiederverwendet — Copy dort ist auf die Hauptseite
 // gemünzt und Hero.tsx scrollt intern zu #kontakt/#zielgruppe (auf /start nicht vorhanden).
+// Bild: gleiches Foto wie auf der Startseite (jakob-foto.jpg) — Platzhalterbild ersetzt.
 // Ein Satz, eine Headline, EIN CTA + Erwartungs-Mikrocopy direkt am Button.
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import coachHero from "@/assets/coach-hero.jpg";
+import jakobFoto from "@/assets/jakob-foto.jpg";
 
 interface StartHeroProps {
   ctaHref: string;
@@ -65,11 +66,11 @@ const StartHero = ({ ctaHref, ctaLabel, ctaTarget = "_self" }: StartHeroProps) =
           {/* Bild */}
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <img
-              src={coachHero}
-              alt="Jakob Neumann beim Personal Training im JohnReed Augsburg"
+              src={jakobFoto}
+              alt="Jakob Neumann, Personal Trainer in Augsburg"
               className="w-full max-w-md rounded-2xl object-cover"
-              width={1024}
-              height={1280}
+              width={1440}
+              height={1920}
               loading="eager"
               fetchPriority="high"
             />
