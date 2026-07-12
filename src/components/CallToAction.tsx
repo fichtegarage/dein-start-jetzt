@@ -4,7 +4,21 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const BUCHUNG_URL = "https://buchung.jakob-neumann.net/erstgespraech?src=website";
 
-const CallToAction = () => {
+// NEU (/start): optionale Props ctaHref/ctaTarget/ctaLabel/microcopy.
+// Defaults = heutiges Verhalten der Hauptseite (BUCHUNG_URL, neuer Tab, "Gespräch buchen").
+interface CallToActionProps {
+  ctaHref?: string;
+  ctaTarget?: "_self" | "_blank";
+  ctaLabel?: string;
+  microcopy?: string;
+}
+
+const CallToAction = ({
+  ctaHref = BUCHUNG_URL,
+  ctaTarget = "_blank",
+  ctaLabel = "Gespräch buchen",
+  microcopy,
+}: CallToActionProps) => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
@@ -20,11 +34,16 @@ const CallToAction = () => {
           </p>
 
           <Button asChild size="lg" className="h-12 px-8 text-[15px] font-medium rounded-full group">
-            <a href={BUCHUNG_URL} target="_blank" rel="noopener noreferrer">
-              Gespräch buchen
+            <a href={ctaHref} target={ctaTarget} rel={ctaTarget === "_blank" ? "noopener noreferrer" : undefined}>
+              {ctaLabel}
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </a>
           </Button>
+          {microcopy && (
+            <p className="text-[13px] mt-3" style={{ color: "#3A4459" }}>
+              {microcopy}
+            </p>
+          )}
         </div>
       </div>
     </section>

@@ -2,12 +2,23 @@
 // Brand Guide V1.1: trust-badge entfernt → Nachtblau #1B3A5C
 // Check-Icon strokeWidth 1.5 (Fließtext), note-Texte Nachtblau
 // NEU-248: Kein-Vertrag-Copy gepatcht, Duo-Block entfernt
+// NEU (/start): optionale Props `compact`, `ctaHref`, `ctaTarget`.
+// Default-Verhalten unverändert (Hauptseite): Button scrollt zu #kontakt.
+// Wird ctaHref gesetzt, wird der Button stattdessen ein Link zu dieser Adresse
+// (z. B. der Buchungs-Deep-Link auf /start) — kein Scroll zu einem auf /start
+// nicht vorhandenen Kontaktformular.
 
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
-const Pricing = () => {
+interface PricingProps {
+  compact?: boolean;
+  ctaHref?: string;
+  ctaTarget?: "_self" | "_blank";
+}
+
+const Pricing = ({ compact = false, ctaHref, ctaTarget = "_self" }: PricingProps) => {
   const { ref, isVisible } = useScrollAnimation();
 
   const soloPackages = [
@@ -111,7 +122,7 @@ const Pricing = () => {
                 <p className="text-sm text-muted-foreground mt-1">
                   {pkg.pricePerSession}€ je Session
                 </p>
-                {pkg.note && (
+                {pkg.note && !compact && (
                   /* note: Nachtblau statt trust-badge */
                   <p className="text-sm mt-2 font-medium" style={{ color: "#1B3A5C" }}>
                     {pkg.note}
@@ -120,7 +131,7 @@ const Pricing = () => {
               </div>
 
               <ul className="space-y-3 mb-8">
-                {pkg.features.map((feature) => (
+                {(compact ? pkg.features.slice(0, 3) : pkg.features).map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <Check
                       className="w-4 h-4 mt-0.5 flex-shrink-0"
@@ -132,16 +143,30 @@ const Pricing = () => {
                 ))}
               </ul>
 
-              <Button
-                onClick={() => scrollToContact(pkg.name)}
-                variant={pkg.popular ? "default" : "outline"}
-                className="w-full"
-              >
-                Paket {pkg.name} anfragen
-              </Button>
-              <p className="text-[11px] text-muted-foreground text-center mt-3 whitespace-nowrap">
-                Kostenloses Erstgespräch. Du entscheidest danach.
-              </p>
+              {ctaHref ? (
+                <Button
+                  asChild
+                  variant={pkg.popular ? "default" : "outline"}
+                  className="w-full"
+                >
+                  <a href={ctaHref} target={ctaTarget} rel={ctaTarget === "_blank" ? "noopener noreferrer" : undefined}>
+                    Paket {pkg.name} anfragen
+                  </a>
+                </Button>
+              ) : (
+                <Button
+                  onClick={() => scrollToContact(pkg.name)}
+                  variant={pkg.popular ? "default" : "outline"}
+                  className="w-full"
+                >
+                  Paket {pkg.name} anfragen
+                </Button>
+              )}
+              {!compact && (
+                <p className="text-[11px] text-muted-foreground text-center mt-3 whitespace-nowrap">
+                  Kostenloses Erstgespräch. Du entscheidest danach.
+                </p>
+              )}
             </div>
           ))}
         </div>
