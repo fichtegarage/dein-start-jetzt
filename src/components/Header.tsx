@@ -23,6 +23,9 @@ const Header = () => {
     label: "Über mich",
     href: "#ueber-mich"
   }, {
+    label: "Galerie",
+    href: "#galerie"
+  }, {
     label: "Ansatz",
     href: "#ansatz"
   }, {
