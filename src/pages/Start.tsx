@@ -28,6 +28,7 @@ const START_FAQ_IDS = [
   "erwartung-ergebnisse",
   "erwartung-frueher-aufgehoert",
   "pakete-vertrag",
+  "pakete-bezahlung",
   "jakob-neu",
 ];
 
