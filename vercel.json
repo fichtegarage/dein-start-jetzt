@@ -1,4 +1,10 @@
 {
+  "redirects": [
+    { "source": "/erstgespraech", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true },
+    { "source": "/erstgespraech/", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true },
+    { "source": "/erstgespräch", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true },
+    { "source": "/erstgespr%C3%A4ch", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
