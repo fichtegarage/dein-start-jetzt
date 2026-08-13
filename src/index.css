@@ -181,6 +181,16 @@
   }
 }
 
+/* Scroll-Anker-Offset — hält Ziel-Abschnitte unter der Sticky-Nav frei
+   (Header-Höhe: h-16 = 4rem, siehe Header.tsx). Gilt gleichermaßen für
+   Menü-Klicks (native <a href="#…">), Deeplinks und die programmatische
+   ScrollToHash-Komponente, da sowohl der native Browser-Sprung als auch
+   Element.scrollIntoView() scroll-margin-top respektieren — eine Quelle,
+   konsistentes Ergebnis auf allen Wegen. */
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
 @layer components {
   .section-padding {
     @apply px-6 py-20 md:px-8 md:py-[6.5rem]; /* 80px / 104px */
