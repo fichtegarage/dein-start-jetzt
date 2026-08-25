@@ -30,10 +30,15 @@ const faqCategories = [
         q: "Was passiert im kostenlosen Erstgespräch?",
         a: "Erstgespräch und Probetraining sind ein Termin. Wir sprechen über deine Ziele, deine Geschichte, deinen Kalender - und gehen anschließend gemeinsam in Bewegung. Du lernst, wie ich coache, ich sehe, wie du dich bewegst. 60-75 Minuten, kostenlos, unverbindlich.",
       },
-      {
+            {
         id: "ablauf-ort",
         q: "Wo findet das Training statt?",
-        a: "Alle Sessions finden im JohnReed Augsburg statt. Du brauchst eine Mitgliedschaft.",
+        a: "Bei einem Fitnessstudio in Augsburg (JohnReed). Details zur Mitgliedschaft findest du unter der nächsten Frage.",
+      },
+      {
+        id: "ablauf-mitgliedschaft",
+        q: "Brauche ich eine Mitgliedschaft?",
+        a: "Für deine Einheiten mit mir bist du mein Gast – dafür brauchst du keine Mitgliedschaft. Für das eigenständige Training mit der App im Studio brauchst du eine JohnReed-Mitgliedschaft, weil die App dich durch Übungen an Geräten führt. Details klären wir im Erstgespräch.",
       },
       {
         id: "ablauf-frequenz",
