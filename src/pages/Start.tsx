@@ -25,6 +25,7 @@ const START_FAQ_IDS = [
   "wen-verletzung",
   "ablauf-erstgespraech",
   "ablauf-ort",
+  "ablauf-mitgliedschaft",
   "erwartung-ergebnisse",
   "erwartung-frueher-aufgehoert",
   "pakete-vertrag",
