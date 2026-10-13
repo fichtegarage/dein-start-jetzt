@@ -15,9 +15,9 @@ export default function middleware(request: Request) {
   if (WP_QUERY_KEYS.some((key) => url.searchParams.has(key))) {
     return new Response(null, {
       status: 301,
-      headers: { Location: `${url.origin}/?dbg=1`, 'x-wp-mw': 'redirect' },
+      headers: { Location: `${url.origin}/` },
     });
   }
 
-  return next({ headers: { 'x-wp-mw': url.searchParams.has('dbg') ? 'pass-after-redirect' : 'pass' } });
+  return next();
 }
