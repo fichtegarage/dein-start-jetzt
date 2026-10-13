@@ -15,9 +15,9 @@ export default function middleware(request: Request) {
   if (WP_QUERY_KEYS.some((key) => url.searchParams.has(key))) {
     return new Response(null, {
       status: 301,
-      headers: { Location: `${url.origin}/` },
+      headers: { Location: `${url.origin}/`, 'x-wp-mw': 'redirect' },
     });
   }
 
-  return next();
+  return next({ headers: { 'x-wp-mw': 'pass' } });
 }
