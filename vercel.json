@@ -3,14 +3,7 @@
     { "source": "/erstgespraech", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true },
     { "source": "/erstgespraech/", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true },
     { "source": "/erstgespräch", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true },
-    { "source": "/erstgespr%C3%A4ch", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true },
-    { "source": "/", "has": [{ "type": "query", "key": "p" }], "destination": "/", "permanent": true },
-    { "source": "/", "has": [{ "type": "query", "key": "feed" }], "destination": "/", "permanent": true },
-    { "source": "/", "has": [{ "type": "query", "key": "paged" }], "destination": "/", "permanent": true },
-    { "source": "/", "has": [{ "type": "query", "key": "cat" }], "destination": "/", "permanent": true },
-    { "source": "/", "has": [{ "type": "query", "key": "page_id" }], "destination": "/", "permanent": true },
-    { "source": "/", "has": [{ "type": "query", "key": "m" }], "destination": "/", "permanent": true },
-    { "source": "/", "has": [{ "type": "query", "key": "attachment_id" }], "destination": "/", "permanent": true }
+    { "source": "/erstgespr%C3%A4ch", "destination": "https://buchung.jakob-neumann.net/erstgespraech?src=website", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
