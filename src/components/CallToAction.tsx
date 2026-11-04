@@ -1,11 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
-
-const BUCHUNG_URL = "https://buchung.jakob-neumann.net/erstgespraech?src=website";
+import { BUCHUNG_URL_WEBSITE } from "@/lib/booking";
 
 // NEU (/start): optionale Props ctaHref/ctaTarget/ctaLabel/microcopy.
-// Defaults = heutiges Verhalten der Hauptseite (BUCHUNG_URL, neuer Tab, "Gespräch buchen").
+// Defaults = Verhalten der Hauptseite (Funnel src=website, neuer Tab,
+// "Kostenloses Erstgespräch buchen"). /start übersteuert alle drei Props.
 interface CallToActionProps {
   ctaHref?: string;
   ctaTarget?: "_self" | "_blank";
@@ -14,9 +14,9 @@ interface CallToActionProps {
 }
 
 const CallToAction = ({
-  ctaHref = BUCHUNG_URL,
+  ctaHref = BUCHUNG_URL_WEBSITE,
   ctaTarget = "_blank",
-  ctaLabel = "Gespräch buchen",
+  ctaLabel = "Kostenloses Erstgespräch buchen",
   microcopy,
 }: CallToActionProps) => {
   const { ref, isVisible } = useScrollAnimation();

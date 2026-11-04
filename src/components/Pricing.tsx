@@ -3,14 +3,15 @@
 // Check-Icon strokeWidth 1.5 (Fließtext), note-Texte Nachtblau
 // NEU-248: Kein-Vertrag-Copy gepatcht, Duo-Block entfernt
 // NEU (/start): optionale Props `compact`, `ctaHref`, `ctaTarget`.
-// Default-Verhalten unverändert (Hauptseite): Button scrollt zu #kontakt.
-// Wird ctaHref gesetzt, wird der Button stattdessen ein Link zu dieser Adresse
-// (z. B. der Buchungs-Deep-Link auf /start) — kein Scroll zu einem auf /start
-// nicht vorhandenen Kontaktformular.
+// Default-Verhalten (Hauptseite): Button ist ein Link in den Buchungs-Funnel
+// (src=website, neuer Tab, Label "Erstgespräch buchen", paket=<slug> zur Lead-Zuordnung).
+// Wird ctaHref gesetzt (/start), wird der Button stattdessen ein Link zu dieser
+// Adresse — dieser Zweig ist unverändert.
 
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { BUCHUNG_URL_WEBSITE } from "@/lib/booking";
 
 interface PricingProps {
   compact?: boolean;
@@ -67,12 +68,6 @@ const Pricing = ({ compact = false, ctaHref, ctaTarget = "_self" }: PricingProps
       note: "Für nachhaltige Veränderung",
     },
   ];
-
-  const scrollToContact = (packageName: string) => {
-    const message = `Hallo Jakob, ich interessiere mich für das Paket ${packageName} und freue mich, wenn du mich kontaktierst. Viele Grüße`;
-    window.dispatchEvent(new CustomEvent("prefill-contact", { detail: { message } }));
-    document.getElementById("kontakt")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <section id="preise" className="section-padding">
@@ -155,11 +150,17 @@ const Pricing = ({ compact = false, ctaHref, ctaTarget = "_self" }: PricingProps
                 </Button>
               ) : (
                 <Button
-                  onClick={() => scrollToContact(pkg.name)}
+                  asChild
                   variant={pkg.popular ? "default" : "outline"}
                   className="w-full"
                 >
-                  Paket {pkg.name} anfragen
+                  <a
+                    href={`${BUCHUNG_URL_WEBSITE}&paket=${pkg.name.toLowerCase()}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Erstgespräch buchen
+                  </a>
                 </Button>
               )}
               {!compact && (
