@@ -103,8 +103,8 @@ const Contact = () => {
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-semibold mb-5">
-              Kontakt
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+              Oder schreib mir einfach
             </h2>
             <p className="text-lg text-muted-foreground">
               Schreib mir eine Nachricht. Ich freue mich von dir zu hören.

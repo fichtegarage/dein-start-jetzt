@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoRund from "@/assets/logo-rund.svg";
+import { BUCHUNG_URL_WEBSITE } from "@/lib/booking";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,13 +40,6 @@ const Header = () => {
     href: "#faq"
   }];
 
-  const scrollToContact = () => {
-    document.getElementById("kontakt")?.scrollIntoView({
-      behavior: "smooth"
-    });
-    setIsMenuOpen(false);
-  };
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled ? "bg-background/80 backdrop-blur-xl border-b border-border" : "bg-transparent"}`}>
       <div className="container">
@@ -70,14 +64,23 @@ const Header = () => {
                 {item.label}
               </a>
             ))}
+            {/* Sekundärer Textlink zum Kontaktformular (erst ab xl, damit die Leiste bei lg nicht überläuft) */}
+            <a
+              href="#kontakt"
+              className="hidden xl:inline text-[13px] font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+            >
+              Kontakt
+            </a>
           </nav>
 
-          {/* Desktop CTA */}
+          {/* Desktop CTA: Primär-CTA in den Buchungs-Funnel */}
           <Button
-            onClick={scrollToContact}
+            asChild
             className="hidden lg:inline-flex h-9 px-5 text-[13px] font-medium rounded-full"
           >
-            Kontakt
+            <a href={BUCHUNG_URL_WEBSITE} target="_blank" rel="noopener noreferrer">
+              Erstgespräch buchen
+            </a>
           </Button>
 
           {/* Mobile Menu Button */}
@@ -104,9 +107,23 @@ const Header = () => {
                   {item.label}
                 </a>
               ))}
+              <a
+                href="#kontakt"
+                onClick={() => setIsMenuOpen(false)}
+                className="py-3 px-4 text-base font-medium text-foreground hover:text-muted-foreground rounded-xl transition-colors"
+              >
+                Kontakt
+              </a>
               <div className="pt-4 px-4">
-                <Button onClick={scrollToContact} className="w-full rounded-full">
-                  Kontakt aufnehmen
+                <Button asChild className="w-full rounded-full">
+                  <a
+                    href={BUCHUNG_URL_WEBSITE}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Erstgespräch buchen
+                  </a>
                 </Button>
               </div>
             </div>
