@@ -6,7 +6,7 @@
 // Default-Verhalten (Hauptseite): Button ist ein Link in den Buchungs-Funnel
 // (src=website, neuer Tab, Label "Erstgespräch buchen", paket=<slug> zur Lead-Zuordnung).
 // Wird ctaHref gesetzt (/start), wird der Button stattdessen ein Link zu dieser
-// Adresse — dieser Zweig ist unverändert.
+// Adresse. Label, Ziel und Verhalten bleiben; Umbruch erlaubt, ab lg einzeilig.
 
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -142,7 +142,7 @@ const Pricing = ({ compact = false, ctaHref, ctaTarget = "_self" }: PricingProps
                 <Button
                   asChild
                   variant={pkg.popular ? "default" : "outline"}
-                  className="w-full"
+                  className="w-full h-auto min-h-10 px-4 whitespace-normal text-center lg:whitespace-nowrap"
                 >
                   <a href={ctaHref} target={ctaTarget} rel={ctaTarget === "_blank" ? "noopener noreferrer" : undefined}>
                     Paket {pkg.name} anfragen
