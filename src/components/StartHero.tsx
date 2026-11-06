@@ -47,7 +47,9 @@ const StartHero = ({ ctaHref, ctaLabel, ctaTarget = "_self" }: StartHeroProps) =
             </p>
 
             <div className="flex flex-col items-center lg:items-start gap-3">
-              <Button asChild size="lg" className="h-12 px-8 text-[15px] font-medium rounded-full group">
+              {/* Schmale Viewports: weniger Innenabstand, Label darf umbrechen (vorher ragte der
+                  Button bei 320/360 px rechts aus dem Viewport). Ab sm wieder einzeilig. */}
+              <Button asChild size="lg" className="h-auto min-h-12 py-3 px-5 sm:px-8 max-w-full whitespace-normal text-balance text-center text-[15px] font-medium rounded-full group">
                 <a
                   href={ctaHref}
                   target={ctaTarget}
