@@ -57,7 +57,9 @@ const Hero = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
-              <Button asChild size="lg" className="group">
+              {/* Schmale Viewports: weniger Innenabstand, bei < ca. 370 px darf das Label umbrechen
+                  (vorher ragte der Button bei 320/360 px rechts aus dem Bild) */}
+              <Button asChild size="lg" className="group h-auto min-h-12 py-3 px-5 sm:px-8 max-w-full whitespace-normal text-balance text-center">
                 <a href={BUCHUNG_URL_WEBSITE} target="_blank" rel="noopener noreferrer">
                   Kostenloses Erstgespräch buchen
                   <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-200" />

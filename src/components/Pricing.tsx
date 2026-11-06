@@ -152,7 +152,7 @@ const Pricing = ({ compact = false, ctaHref, ctaTarget = "_self" }: PricingProps
                 <Button
                   asChild
                   variant={pkg.popular ? "default" : "outline"}
-                  className="w-full"
+                  className="w-full h-auto min-h-10 px-4 whitespace-normal text-center"
                 >
                   <a
                     href={`${BUCHUNG_URL_WEBSITE}&paket=${pkg.name.toLowerCase()}`}
@@ -164,7 +164,7 @@ const Pricing = ({ compact = false, ctaHref, ctaTarget = "_self" }: PricingProps
                 </Button>
               )}
               {!compact && (
-                <p className="text-[11px] text-muted-foreground text-center mt-3 whitespace-nowrap">
+                <p className="text-[11px] text-muted-foreground text-center mt-3 text-balance">
                   Kostenloses Erstgespräch. Du entscheidest danach.
                 </p>
               )}
