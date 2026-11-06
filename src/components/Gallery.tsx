@@ -9,10 +9,16 @@
 // Scroll-Effekt entsteht rein durch unterschiedlich hohe Masonry-Spalten
 // (echter Dokumentfluss, kein Scroll-Jacking). Die Lightbox verwendet nur
 // dezente Opacity/Scale-Übergänge mit der Brand-Easing-Kurve, kein Bounce.
+//
+// Einklappen: Die Galerie startet als Teaser (eine Bildreihe) und lässt sich
+// über „Mehr anzeigen" / „Weniger anzeigen" aufklappen. Alle 33 Bilder bleiben
+// im Array und im DOM — der Teaser blendet nur per CSS aus. Dadurch bleiben die
+// Indizes der Lightbox in beiden Zuständen identisch.
 
-import { useEffect, useState, useCallback } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useRef, useState, useCallback } from "react";
+import { X, ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
+import { Button } from "@/components/ui/button";
 
 interface GalleryImage {
   src: string;
@@ -62,9 +68,48 @@ const galleryImages: GalleryImage[] = [
 ];
 // ──────────────────────────────────────────────────────────────────────
 
+// ─── Teaser im eingeklappten Zustand ─────────────────────────────────────
+// Sichtbare Bilder je Breakpoint (Spaltenzahl aus `columns-2 sm:columns-3 lg:columns-4`):
+//   < 640 px   (2 Spalten): 4 Bilder → 2 × 2
+//   640–1023 px (3 Spalten): 3 Bilder → 1 Reihe
+//   ≥ 1024 px  (4 Spalten): 4 Bilder → 1 Reihe
+// Die Anzahl muss ein Vielfaches der Spaltenzahl sein — sonst verteilt
+// CSS-Columns die Kacheln ungleichmäßig und lässt die letzte Spalte leer.
+// Die Klassen stehen als vollständige Strings da, damit Tailwind sie findet.
+const TEASER_EAGER_COUNT = 4;
+
+const teaserClass = (index: number): string => {
+  if (index <= 2) return "block"; // in jedem Breakpoint Teil des Teasers
+  if (index === 3) return "block sm:max-lg:hidden"; // nur bei 3 Spalten ausgeblendet
+  return "hidden"; // nur im aufgeklappten Zustand sichtbar
+};
+// ──────────────────────────────────────────────────────────────────────
+
 const Gallery = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const sectionRef = useRef<HTMLElement>(null);
+  const collapseRequested = useRef(false);
+  const [expanded, setExpanded] = useState(false);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleExpanded = () => {
+    collapseRequested.current = expanded; // true, wenn gerade eingeklappt wird
+    setExpanded(!expanded);
+  };
+
+  // Nach dem Einklappen schrumpft die Seite um mehrere tausend Pixel. Liegt der
+  // Sektionsanfang dann über dem Viewport, springen wir dorthin zurück — sonst
+  // landet man irgendwo weiter unten (Preise/FAQ). `scroll-margin-top` der
+  // Sektion (index.css) hält den Abstand zum Header. Sofortiger Sprung statt
+  // Animation, damit nichts durch den Inhalt darunter „rauscht".
+  useEffect(() => {
+    if (expanded || !collapseRequested.current) return;
+    collapseRequested.current = false;
+    const section = sectionRef.current;
+    if (section && section.getBoundingClientRect().top < 0) {
+      section.scrollIntoView({ block: "start", behavior: "instant" as ScrollBehavior });
+    }
+  }, [expanded]);
 
   const close = useCallback(() => setOpenIndex(null), []);
   const showPrev = useCallback(
@@ -105,7 +150,7 @@ const Gallery = () => {
   const activeImage = openIndex !== null ? galleryImages[openIndex] : null;
 
   return (
-    <section id="galerie" className="section-padding">
+    <section ref={sectionRef} id="galerie" className="section-padding">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${
@@ -123,24 +168,48 @@ const Gallery = () => {
 
         {/* Pinterest-Style Masonry: native CSS-Columns, kein Scroll-Jacking.
             Kachelhöhen entsprechen dem echten Bildverhältnis — kein Zuschneiden. */}
-        <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 md:gap-5">
+        <div
+          id="galerie-bilder"
+          className="columns-2 sm:columns-3 lg:columns-4 gap-4 md:gap-5"
+        >
           {galleryImages.map((image, index) => (
             <button
               key={image.src}
               type="button"
               onClick={() => setOpenIndex(index)}
               aria-label={`${image.alt} – vergrößern`}
-              className="group block w-full break-inside-avoid mb-4 md:mb-5 rounded-2xl overflow-hidden bg-secondary card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+              className={`group ${
+                expanded ? "block" : teaserClass(index)
+              } w-full break-inside-avoid mb-4 md:mb-5 rounded-2xl overflow-hidden bg-secondary card-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground`}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                loading={index < 6 ? "eager" : "lazy"}
+                loading={index < TEASER_EAGER_COUNT ? "eager" : "lazy"}
                 style={{ aspectRatio: image.aspectRatio ?? "3 / 2" }}
                 className="w-full h-full object-cover block transition-transform duration-300 ease-out group-hover:scale-[1.02]"
               />
             </button>
           ))}
+        </div>
+
+        {/* Umschalter: Teaser ↔ alle Bilder. Bleibt dasselbe Element, daher
+            behält die Tastatur-Fokussierung beim Umschalten ihre Position. */}
+        <div className="flex justify-center mt-2 md:mt-4">
+          <Button
+            type="button"
+            variant="outline"
+            onClick={toggleExpanded}
+            aria-expanded={expanded}
+            aria-controls="galerie-bilder"
+          >
+            {expanded ? "Weniger anzeigen" : "Mehr anzeigen"}
+            {expanded ? (
+              <ChevronUp aria-hidden="true" />
+            ) : (
+              <ChevronDown aria-hidden="true" />
+            )}
+          </Button>
         </div>
       </div>
 
