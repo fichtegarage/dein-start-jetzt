@@ -33,7 +33,9 @@ const CallToAction = ({
 
           </p>
 
-          <Button asChild size="lg" className="h-12 px-8 text-[15px] font-medium rounded-full group">
+          {/* max-w-full + Umbruch: das lange Label ("Kostenloses Erstgespräch buchen") passt auf
+              schmalen Viewports nicht in eine Zeile und ragte sonst rechts aus dem Container */}
+          <Button asChild size="lg" className="h-auto min-h-12 py-3 px-6 sm:px-8 max-w-full whitespace-normal text-balance text-center text-[15px] font-medium rounded-full group">
             <a href={ctaHref} target={ctaTarget} rel={ctaTarget === "_blank" ? "noopener noreferrer" : undefined}>
               {ctaLabel}
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
