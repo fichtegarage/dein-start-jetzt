@@ -1,5 +1,5 @@
 import { useState } from "react";
-import jakobFoto from "@/assets/jakob-foto.jpg";
+import jakobCoaching from "@/assets/jakob-coaching.jpg";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 
@@ -25,13 +25,15 @@ const AboutMe = () => {
       <div ref={ref} className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-5xl mx-auto">
           {/* Image */}
-          <div className="flex flex-col items-center lg:items-start gap-6">
-            <img src={jakobFoto} alt="Jakob Neumann" className="w-48 md:w-64 rounded-2xl object-cover" />
-            <div className="text-center lg:text-left">
-              <p className="text-2xl md:text-3xl font-semibold tracking-tight">Jakob Neumann</p>
-              <p className="text-lg text-muted-foreground font-medium mt-1">Stronger Every Day</p>
-              <p className="text-sm text-muted-foreground mt-1">Personal Training</p>
-            </div>
+          <div className="flex justify-center lg:justify-start">
+            <img
+              src={jakobCoaching}
+              alt="Jakob Neumann im Gespräch mit einer Kundin beim Personal Training"
+              className="w-full max-w-md lg:max-w-none rounded-2xl object-cover"
+              width={1200}
+              height={900}
+              loading="lazy"
+            />
           </div>
 
           {/* Content */}
