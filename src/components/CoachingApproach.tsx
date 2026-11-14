@@ -2,7 +2,7 @@
 // Brand Guide V1.1: trust-badge entfernt → Nachtblau #1B3A5C
 // Icon-Stroke 1.5 im Fließtext
 // NEU (/start): optionaler `compact`-Prop, Default = heutiges Verhalten (Hauptseite unverändert).
-// compact zeigt eine gekürzte Auswahl der Punkte und lässt den Schluss-Quote-Block weg.
+// compact zeigt eine gekürzte Auswahl der Punkte. Schluss-Zitat entfernt (B1: ein stehendes Zitat auf der Startseite).
 
 import { Check } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -83,14 +83,6 @@ const CoachingApproach = ({ compact = false }: CoachingApproachProps) => {
               </div>
             ))}
           </div>
-
-          {!compact && (
-            <div className="mt-12 md:mt-14 p-8 md:p-10 bg-card rounded-3xl border border-border">
-              <blockquote className="text-xl md:text-2xl font-medium leading-relaxed text-center max-w-2xl mx-auto">
-                „Die meisten Trainer formen deinen Körper. Ich arbeite mit dir außerdem daran, wie du dich in ihm fühlst."
-              </blockquote>
-            </div>
-          )}
         </div>
       </div>
     </section>

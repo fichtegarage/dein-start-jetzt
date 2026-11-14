@@ -5,6 +5,7 @@ const sections = [
   { id: "hero", label: "Start" },
   { id: "philosophie", label: "Philosophie" },
   { id: "zielgruppe", label: "Zielgruppe" },
+  { id: "ablauf", label: "Ablauf" },
   { id: "ueber-mich", label: "Über mich" },
   { id: "galerie", label: "Galerie" },
   { id: "ansatz", label: "Ansatz" },
