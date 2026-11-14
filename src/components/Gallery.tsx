@@ -127,7 +127,7 @@ const Gallery = () => {
     []
   );
 
-  // Tastatursteuerung + Scroll-Sperre, solange die Lightbox offen ist
+  // Tastatursteuerung, solange die Lightbox offen ist
   useEffect(() => {
     if (openIndex === null) return;
 
@@ -138,14 +138,36 @@ const Gallery = () => {
     };
 
     document.addEventListener("keydown", handleKeyDown);
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = previousOverflow;
-    };
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [openIndex, close, showPrev, showNext]);
+
+  // iOS-feste Scroll-Sperre: nur beim Öffnen/Schließen (nicht beim Blättern).
+  // Ein reines overflow:hidden auf dem Body springt auf iOS Safari an den
+  // Seitenanfang; position:fixed mit gemerkter Position hält sie stabil.
+  const isOpen = openIndex !== null;
+  useEffect(() => {
+    if (!isOpen) return;
+    const scrollY = window.scrollY;
+    const body = document.body;
+    const prev = {
+      position: body.style.position, top: body.style.top, left: body.style.left,
+      right: body.style.right, width: body.style.width, overflow: body.style.overflow,
+    };
+    body.style.position = "fixed";
+    body.style.top = `-${scrollY}px`;
+    body.style.left = "0";
+    body.style.right = "0";
+    body.style.width = "100%";
+    body.style.overflow = "hidden";
+    return () => {
+      Object.assign(body.style, prev);
+      const html = document.documentElement;
+      const sb = html.style.scrollBehavior;
+      html.style.scrollBehavior = "auto"; // globales scroll-behavior:smooth kurz aus,
+      window.scrollTo(0, scrollY);        // damit die Rückkehr nicht animiert/„rauscht"
+      html.style.scrollBehavior = sb;
+    };
+  }, [isOpen]);
 
   const activeImage = openIndex !== null ? galleryImages[openIndex] : null;
 
