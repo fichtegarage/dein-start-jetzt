@@ -152,7 +152,7 @@ const FAQ = ({ includeIds, hideFooterNote = false }: FAQProps) => {
     : faqCategories;
 
   return (
-    <section id="faq" className="section-padding">
+    <section id="faq" className="section-padding section-alt">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}

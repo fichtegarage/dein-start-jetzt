@@ -172,7 +172,7 @@ const Gallery = () => {
   const activeImage = openIndex !== null ? galleryImages[openIndex] : null;
 
   return (
-    <section ref={sectionRef} id="galerie" className="section-padding">
+    <section ref={sectionRef} id="galerie" className="section-padding section-alt">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${

@@ -70,7 +70,7 @@ const Pricing = ({ compact = false, ctaHref, ctaTarget = "_self" }: PricingProps
   ];
 
   return (
-    <section id="preise" className="section-padding">
+    <section id="preise" className="section-padding section-alt">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${

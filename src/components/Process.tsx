@@ -45,7 +45,7 @@ const Process = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="ablauf" className="section-padding">
+    <section id="ablauf" className="section-padding section-alt">
       <div
         ref={ref}
         className={`container transition-all duration-700 ease-out ${
