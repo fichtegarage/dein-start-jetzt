@@ -93,7 +93,7 @@ export function Testimonials() {
     <section
       id="testimonials"
       style={{ backgroundColor: "#F4F2ED" }}
-      className="py-[80px] md:py-[104px] px-6"
+      className="pt-[80px] pb-[56px] md:pt-[104px] md:pb-[72px] px-6"
     >
       <div className="max-w-[1120px] mx-auto">
 
