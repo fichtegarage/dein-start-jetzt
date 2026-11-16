@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import DotNav from "@/components/DotNav";
-import HeroQuote from "@/components/HeroQuote";
 import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
 import TargetAudience from "@/components/TargetAudience";
+import Process from "@/components/Process";
 import CoachingApproach from "@/components/CoachingApproach";
 import CoachHub from "@/components/CoachHub";
 import AboutMe from "@/components/AboutMe";
@@ -32,9 +32,9 @@ const Index = () => {
       <DotNav />
       <main>
         <Hero />
-        <HeroQuote />
         <Philosophy />
         <TargetAudience />
+        <Process />
         <AboutMe />
         <Gallery />
         <CoachingApproach />
